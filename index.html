@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- //Site  Metas -->
 
     <!-- Fonts -->
@@ -22,6 +22,7 @@
 
     <!-- Styles -->
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="styles/responsive.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- //Styles -->
   </head>
@@ -30,293 +31,296 @@
     <div class="navbar">
       <nav>
         <div class="nav-left">
-          <h1 class="site_name">TjMalebana</h1>
+          <h1 class="site_name">tj.</h1>
+          <ul>
+            <li><a href="" class="fa fa-bars"></a></li>
+            <li><a href=""></a></li>
+          </ul>
         </div>
         <div class="nav-right">
           <ul>
-            <li><a href="#"><b>Home</b></a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Get In Touch</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#footer">Get In Touch</a></li>
           </ul>
         </div>
       </nav>
     </div>
 
     <div class="jumbotron">
-      <div class="jumbotron-container">
-
-        <div class="jumbo_text">
-          <h1 class="jumbo_heading">
-            Designs & Develop Beautiful Websites
-          </h1>
-          <p>
-            Designing visually pleasing and minimulistic ui designs is my true passion 
-            & getting a life changing product into the hands of millions of people is my 
-            true calling.
-          </p>
-          <div class="social_media">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/johannes.malebana.16/" class="fa fa-facebook"></a>
-              </li>
-              <li>
-                <a href="#" class="fa fa-instagram"></a>
-              </li>
-              <li>
-                <a href="https://github.com/Tebogo60" class="fa fa-github"></a>
-              </li>
-            </ul>
+      <div class="bg-jumbo">
+        <div class="container">
+          <div class="jumbo_text">
+            <h1 class="jumbo_heading">
+              Front End Web Developer
+            </h1>
+            <div class="social_media">
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/johannes.malebana.16/" class="fa fa-facebook"></a>
+                </li>
+                <li>
+                  <a href="#" class="fa fa-instagram"></a>
+                </li>
+                <li>
+                  <a href="https://github.com/Tebogo60" class="fa fa-github"></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div class="content">
-      <div class="bg-about">
+      <section id="about" class="bg-about">
         <div class="container">
-          <h1 class="bg-heading">about me.</h1>
-          <div class="about-content">
-            <div class="about-container">
-              <div class="about-text">
-                <h1 class="heading"><b>a</b>bout <b>m</b>e</h1><br/>
-                <h5 class="text-color">Junior Web Developer</h5>
-                <h1 class="sub-heading">Hi, My name is Tebogo Johannes Malebana</h1><br/>
-                <p class="text-color">
-                  I am a self taught junior web developer and minimulistic design enthusiast.
-                  Designing visually pleasing and minimulistic ui designs is my true passion.
-                  Getting a life changing product into the hands of millions of people is my true
-                  calling. 
-                  <br/><br/>
-                  Web development is a innovative and solution based industry and the reason
-                  why I am enthusiastis about it.
-                </p>
+
+          <div class="row">
+            <div class="col">
+              <h1 class="heading">About Me</h1><br/>
+              <h5 class="text-color">Front End Web Developer</h5>
+              <h1 class="sub-heading">Hi, My name is Tebogo Johannes Malebana</h1><br/>
+              <p class="text-color">
+                I am a front end web developer and minimulistic design enthusiast.
+                I have a solid understanding of HTML, CSS, Bootstrap and Git and
+                I am currently expanding my skills by studying and working with Javascript, React and PHP.
                 <br/><br/>
-                <a href="#" class="button" download>
-                  <i></i> Download CV
-                </a>
-              </div>
-              <div class="about-img">
-                <img src="images/about_img-3.png" alt="about_img" width="100%">
-              </div>
+                Designing visually pleasing and minimulistic ui designs is my true passion and
+                My goal is to grow my skills as a back end developer thus I can become a full 
+                stack Developer.
+              </p>
+              <br/><br/>
+              <a href="#" class="button" download>
+                <i></i> Download CV
+              </a>
+            </div>
+            <div class="col bout-img">
+              <img src="images/about.png" alt="about_img">
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="skills">
+        </div>
+      </section>
+
+      <section id="skills" class="bg-skills">
         <div class="container">
 
-          <h1 class="bg-heading">hard skills & tools.</h1>
-          <div class="skills-content">
-            <div class="skills-container">
-              <h1 class="heading"><b>h</b>ard <b>s</b>kills</h1><br/>
-                <div class="row">
-
-                  <div class="col-2">
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/html.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>HTML</h5>
-                        <div class="bg-bar">
-                          <div class="html bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/css-3.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>CSS</h5>
-                        <div class="bg-bar">
-                          <div class="css bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/js.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>JAVASCRIPT</h5>
-                        <div class="bg-bar">
-                          <div class="javascript bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/php.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>PHP</h5>
-                        <div class="bg-bar">
-                          <div class="php bar"></div>
-                        </div>
-                      </div>
-                    </div>
+          <h1 class="heading">Skills & Tools</h1><br/>
+          <div class="row">             
+            <div class="col">
+              <div class="skill">
+                <div>
+                  <img src="images/icons/html.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>HTML</h5>
+                  <div class="bg-bar">
+                    <div class="html bar"></div>
                   </div>
-
-                  <div class="col-2">
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/photoshop.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>PHOTOSHOP</h5>
-                        <div class="bg-bar">
-                          <div class="photoshop bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/illustrator.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>iLLUSTRATOR</h5>
-                        <div class="bg-bar">
-                          <div class="illutrator bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/figma.png" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>FIGMA</h5>
-                        <div class="bg-bar">
-                          <div class="figma bar"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="skill">
-                      <div>
-                        <img src="images/icons/bootstrap-solid.svg" alt="" class="icon_img" width="50px">
-                      </div>
-                      <div>
-                        <h5>BOOTSTRAP</h5>
-                        <div class="bg-bar">
-                          <div class="bootstrap bar"></div>
-                        </div>
-                      </div>
-                    </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/css-3.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>CSS</h5>
+                  <div class="bg-bar">
+                    <div class="css bar"></div>
                   </div>
-                  
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/js.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>JAVASCRIPT</h5>
+                  <div class="bg-bar">
+                    <div class="javascript bar"></div>
+                  </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/php.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>PHP</h5>
+                  <div class="bg-bar">
+                    <div class="php bar"></div>
+                  </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/icons8-git.svg" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>GIT</h5>
+                  <div class="bg-bar">
+                    <div class="git bar"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div>              
+            <div class="col">
+              <div class="skill">
+                <div>
+                  <img src="images/icons/photoshop.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>PHOTOSHOP</h5>
+                  <div class="bg-bar">
+                    <div class="photoshop bar"></div>
+                  </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/illustrator.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>iLLUSTRATOR</h5>
+                  <div class="bg-bar">
+                    <div class="illutrator bar"></div>
+                  </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/xd.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>ADOBE XD</h5>
+                  <div class="bg-bar">
+                    <div class="xd bar"></div>
+                  </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/figma.png" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>FIGMA</h5>
+                  <div class="bg-bar">
+                    <div class="figma bar"></div>
+                  </div>
+                </div>
+              </div>              
+              <div class="skill">
+                <div>
+                  <img src="images/icons/bootstrap-solid.svg" alt="" class="icon_img" width="50px">
+                </div>
+                <div class="skill_icon">
+                  <h5>BOOTSTRAP</h5>
+                  <div class="bg-bar">
+                    <div class="bootstrap bar"></div>
+                  </div>
+                </div>
+              </div>
+
+            </div> 
+          </div>
+
+        </div>
+      </section>
+
+      <section id="portfolio" class="bg-portfolio">
+        <div class="container">
+          <div class="portfolio">
+            <h1 class="heading">Portfolio</h1>
+            <h5>Here are a few designs project I've worked on recently. What to see more? Email me.</h5>
+            <br/>
+            <div class="row">
+              <div href="#" class="col port-1">
+                <div class="portfolio_info">
+                  <p>Here is a project I did for an architect in my area and it shows my understanding of bootstrap.</p>
+                  <a target=”_blank” href="https://www.creativeld.co.za/">Visit Site</a>
+                </div>
+              </div>
+
+              <div href="#" class="col port-2">
+                <div class="portfolio_info">
+                  <p>Here is a blog type web design I did in figma thats showcase my phototyping skill.</p>
+                  <a href="#">Visit Site</a>
+                </div>
+              </div>
+
+              <div href="#" class="col port-3">
+                <div class="portfolio_info">
+                  <p>Here is a minimulistic blog type website that shows my versatile design skills.</p>
+                  <a href="#">Visit Site</a>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-      </div>
+      </section>
 
-      <div class="bg-portfolio">
-        <div class="container">
+      <div class="bg-contact">
+        <div class="bg-getintouch">
+          <div class="container">
 
-          <h1 class="bg-heading">portfolio.</h1>
-          <div class="portfolio-content">
-            <div class="portfolio-container">
-
-              <h1 class="heading"><b>p</b>ortfolio<br/></h1><br/>
-              <h5>Here are a few designs project I've worked on recently. What to see more? Email me.</h5>
-              <br/>
-              <div class="row-3">
-
-                <a href="#" class="col-3">
-                  <img src="images/portfolio/122.png" alt="" class="port_img" width="100%">
-                  <b>Visit Site</b>
-                </a>
-                <a href="#" class="col-3">
-                  <img src="images/portfolio/123.png" alt="" class="port_img" width="100%">
-                  <b>Visit Site</b>
-                </a>
-                <a href="#" class="col-3">
-                  <img src="images/portfolio/179.png" alt="" class="port_img" width="100%">
-                  <b>Visit Site</b>
-                </a>
-
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="bg-getintouch">
-        <div class="container">
-
-          <h1 class="bg-heading-getintouch">get in touch. <br/>contact form </h1>
-          <div class="getintouch-content">
-            <div class="getintouch-container">
-              <div class="row">
-                <div class="col-2">
-                  <h1 class="heading text-light"><b>g</b>et <b>i</b>n <b>t</b>ouch<br/></h1>
-                  <br/><br/>
-                  <h2 style="color: #fff;"><b>Contact Details</b></h2><br/>
-                  <h5 class="text-light">These are the most convinent ways to contact me and guaranteed 24 hour responses</h5>
+              <div class="getintouch-container">
+                <h1 class="heading">Get In Touch</h1>
                   <br/>
-                  <ul class="text-light">
-                    <li>
-                      <i class="fa fa-envelope-o"></i> Email Address <br/>
-                      <p>tjjmalebana@gmail.com</p>
-                    </li>
-                    <li>
-                      <i class="fa fa-whatsapp"></i> WhatsApp<br/>
-                      <p>+27 67 057 2758</p>
-                    </li>
-                    <li>
-                      <i class="fa fa-facebook"></i> Facebook<br/>
-                      <p>https://www.facebook.com/johannesMalebana/</p>
-                    </li>
-                    <li>
-                      <i class="fa fa-link"></i> Website<br/>
-                      <p>https://tjmalebana.github.com</p>
-                    </li>
-                  </ul>
-                </div>
+                  <h2>Contact Details</h2><br/><br/>
+                <div class="row">
+                  <div class="col">
+                    <ul>
+                      <li>
+                        <i class="fa fa-envelope-o"></i> Email Address <br/>
+                        <p>tjjmalebana@gmail.com</p>
+                      </li>
+                      <li>
+                        <i class="fa fa-whatsapp"></i> WhatsApp<br/>
+                        <p>+27 67 057 2758</p>
+                      </li>
+                      <li>
+                        <i class="fa fa-facebook"></i> Facebook<br/>
+                        <p>https://www.facebook.com/johannesMalebana/</p>
+                      </li>
+                      <li>
+                        <i class="fa fa-link"></i> Website<br/>
+                        <p>https://tjmalebana.github.com</p>
+                      </li>
+                    </ul>
+                  </div>
 
-                <div class="col-2">
-                  <form class="contact-form">
-                    <input name="name" type="text" class="form-in" placeholder="Name">
-                    <input name="name" type="text" class="form-in" placeholder="Email">
-                    <textarea name="message" rows="5" class="form-text" placeholder="Message"></textarea><br/>
-                    <button name="send" type="submit" class="button">
-                      <i class="fa fa-paper-plane"></i> Send Message
-                    </button>
-                  </form>
-                </div>
+                  <div class="col">
+                    <form class="contact-form" action="https://formsubmit.co/tjjmalebana@gmail.com" method="POST">
+                      <input name="name" type="text" class="form-in" placeholder="Names" required>
+                      <input name="email" type="email" class="form-in" placeholder="Email" required>
+                      <textarea name="message" rows="5" class="form-text" placeholder="Write your message here" required></textarea><br/>
+                      <button name="send" type="submit" class="button">
+                        <i class="fa fa-paper-plane"></i> Send Message
+                      </button>
+                    </form>
+                  </div>
 
+                </div>
               </div>
             </div>
           </div>
 
         </div>
       </div>
+
     </div>
 
   </body>
 
-  <footer>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Get In Touch</a></li>
-    </ul>
-    © 2022 tjmalebana, All rights reserved.
-  </footer>
+  <section id="footer">
+    <footer>
+      <div class="container">
+        <span>© 2022 tjmalebana, All rights reserved.</span>
+      </div>
+    </footer> 
+  </section>
 </html>
