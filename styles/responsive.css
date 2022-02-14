@@ -1,0 +1,182 @@
+@media (max-width: 991px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .heading {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: calc(100% - 40px);
+        padding: 0 20px;
+    }
+
+    .nav-left ul {
+        display: block;
+    }
+
+    .nav-left ul li {
+        list-style: none;
+    }
+
+    .nav-left ul li a {
+        color: #DB7C26;
+        font-size: 25px;
+        text-decoration: none;
+        position: fixed;
+        right: 25px;
+        z-index: 10;
+    }
+
+    .nav-right {
+        flex: none;
+        position: fixed;
+        background-color: rgba(3, 0, 39,.75);
+        backdrop-filter: blur(40px);
+        width: 400px;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding: 85px 15px 15px;
+        z-index: 9;
+        /* display: none; */
+    }
+
+    .nav-right ul li {
+        display: block;
+        padding: 25px 15px;
+        margin-left: 0;
+        text-align: left;
+        border-bottom: 1px solid rgba(225, 225, 225, .02);
+    }
+
+    .nav-right ul li a {
+        color: #e1e1e1;
+        font-size: 16px;
+        font-weight: 900;
+    }
+
+    /* --- Jumbotron --- */
+
+    .jumbotron {
+        width: calc(100% - 30px);
+    }
+
+    .jumbo_heading {
+        font-size: 75px;
+        margin-bottom: 15px;
+    }
+    
+    .jumbotron {
+        padding: 0 15px;
+    }
+
+    .jumbo_text p {
+        width: auto;
+      }
+
+    /* --- about --- */
+
+    .bg-about {
+        padding: 50px 15px;
+        width: auto;
+    }
+
+    .bg-about .row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bg-about .sub-heading {
+        font-size: 40px;
+    }
+
+    /* --- skills --- */
+
+    .bg-skills {
+        padding: 50px 15px;
+    }
+
+    .bg-skills .row {
+        gap: 30px;
+    }
+
+    .bg-skills .bg-bar {
+        width: calc(50vw - 105px);
+    }
+
+    /* --- Portfolio --- */
+
+    .bg-portfolio {
+        padding: 50px 15px;
+    }
+
+    /* --- Contact --- */
+
+    .bg-getintouch {
+        padding: 50px 15px;
+    }
+
+    .bg-getintouch .row {
+        padding: 15px
+    }
+}
+
+@media (max-width: 767px) {
+
+    .jumbo_heading {
+        font-size: 50px;
+    }
+
+    .nav-right {
+        flex: none;
+        position: fixed;
+        background-color: rgba(3, 0, 39,.75);
+        backdrop-filter: blur(40px);
+        width: 90%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        padding: 85px 15px 15px;
+        z-index: 9;
+        /* display: none; */
+    }
+
+    .row {
+        display: block;
+    }
+
+    .row .col {
+        margin: 0 0 25px;
+    }
+
+    /* --- about --- */
+
+    .bg-about {
+        padding: 20px 15px;
+    }
+
+    /* --- skills --- */
+
+    .bg-skills {
+        padding: 20px 15px;
+    }
+
+    .bg-skills .bg-bar {
+        width: calc(100vw - 110px);
+    }
+
+    /* --- Portfolio --- */
+
+    .bg-portfolio {
+        padding: 20px 15px;
+    }
+
+    /* --- Contact --- */
+
+    .bg-getintouch {
+        padding: 20px 15px;
+    }
+
+}
