@@ -83,6 +83,14 @@ nav {
   text-align: right;
 }
 
+.nav-right span {
+  display: inline;
+}
+
+.nav-right i {
+  display: none;
+}
+
 .nav-right {
   flex: 9;
   text-align: end;
