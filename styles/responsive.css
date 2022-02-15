@@ -1,4 +1,4 @@
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
 
     .container {
         width: 100%;
@@ -12,52 +12,7 @@
         width: calc(100% - 40px);
         padding: 0 20px;
     }
-
-    .nav-left ul {
-        display: block;
-    }
-
-    .nav-left ul li {
-        list-style: none;
-    }
-
-    .nav-left ul li a {
-        color: #DB7C26;
-        font-size: 25px;
-        text-decoration: none;
-        position: fixed;
-        right: 25px;
-        z-index: 10;
-    }
-
-    .nav-right {
-        flex: none;
-        position: fixed;
-        background-color: rgba(3, 0, 39,.75);
-        backdrop-filter: blur(40px);
-        width: 400px;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        padding: 85px 15px 15px;
-        z-index: 9;
-        /* display: none; */
-    }
-
-    .nav-right ul li {
-        display: block;
-        padding: 25px 15px;
-        margin-left: 0;
-        text-align: left;
-        border-bottom: 1px solid rgba(225, 225, 225, .02);
-    }
-
-    .nav-right ul li a {
-        color: #e1e1e1;
-        font-size: 16px;
-        font-weight: 900;
-    }
-
+    
     /* --- Jumbotron --- */
 
     .jumbotron {
@@ -129,26 +84,21 @@
         font-size: 50px;
     }
 
-    .nav-right {
-        flex: none;
-        position: fixed;
-        background-color: rgba(3, 0, 39,.75);
-        backdrop-filter: blur(40px);
-        width: 90%;
-        height: 100vh;
-        top: 0;
-        right: 0;
-        padding: 85px 15px 15px;
-        z-index: 9;
-        /* display: none; */
-    }
-
     .row {
         display: block;
     }
 
     .row .col {
         margin: 0 0 25px;
+    }
+
+    .nav-right span {
+        display: none;
+    }
+
+    .nav-right i {
+        font-size: 18px;
+        display: inline;
     }
 
     /* --- about --- */
