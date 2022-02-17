@@ -25,28 +25,60 @@
     <link href="styles/responsive.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- //Styles -->
+
+    <!-- -- Script --  -->
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#open-navbar').click(function(){
+          $('.navigation').toggleClass('show')
+        });
+        
+        $('#open-navbar').click(function(){
+          $('.line1').toggleClass('show')
+          $('.line2').toggleClass('show')
+          $('.line3').toggleClass('show')
+        });
+      });
+
+      
+    </script>
+    <!-- -- Script --  -->
   </head>
 
   <body>
     <div class="navbar">
       <nav>
-        <div class="nav-left">
-          <h1 class="site_name">tj.</h1>
-          <div class="nav-btn">
-            <span class="line1"></span>
-            <span class="line2"></span>
-            <span class="line3"></span>
-          </div>
-        </div>
-        <div class="nav-right">
-          <ul>
-            <li class="nav-border"><a href="#"><i class="fa fa-home"></i> <span> Home</span></a></li>
-            <li class="nav-border"><a href="#about"><i class="fa fa-user"></i> <span> About</span></a></li>
-            <li class="nav-border"><a href="#skills"><i class="fa fa-paint-brush"></i> <span> Skills</span></a></li>
-            <li class="nav-border"><a href="#portfolio"><i class="fa fa-files-o"></i> <span> Portfolio</span></a></li>
-            <li class="nav-border"><a href="#footer"><i class="fa fa-phone"></i> <span> Get In Touch</span></a></li>
-          </ul>
-        </div>
+        <a href="index.html" class="brand">
+          <h1>tj.</h1>
+        </a>
+        <ul class="navigation">
+          <li>
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+          </li>
+          <li>
+            <a href="#footer" class="nav-link">Get In Touch</a>
+          </li>
+        </ul>
+
+        <ul class="bars-lines">
+          <li>
+            <button onclick="togglePopup()" id="open-navbar" class="bars">
+              <span class="line1"></span>
+              <span class="line2"></span>
+              <span class="line3"></span>
+            </button>
+          </li>
+        </ul>
       </nav>
     </div>
 
@@ -63,7 +95,7 @@
                   <a href="https://www.facebook.com/johannes.malebana.16/" class="fa fa-facebook"></a>
                 </li>
                 <li>
-                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="https://www.instagram.com/johannes60_za/" class="fa fa-instagram"></a>
                 </li>
                 <li>
                   <a href="https://github.com/Tebogo60" class="fa fa-github"></a>
@@ -94,7 +126,7 @@
                 stack Developer.
               </p>
               <br/><br/>
-              <a href="#" class="button" download>
+              <a href="uploads/My Personal Cv.pdf" class="button" download>
                 <i></i> Download CV
               </a>
             </div>
@@ -285,11 +317,11 @@
                       </li>
                       <li>
                         <i class="fa fa-facebook"></i> Facebook<br/>
-                        <p>https://www.facebook.com/johannesMalebana/</p>
+                        <p>https://www.facebook.com/johannes.malebana.16/</p>
                       </li>
                       <li>
                         <i class="fa fa-link"></i> Website<br/>
-                        <p>https://tjmalebana.github.com</p>
+                        <p>https://tebogo60.github.io/personal-website/</p>
                       </li>
                     </ul>
                   </div>
@@ -324,6 +356,4 @@
       </div>
     </footer> 
   </section>
-
-  <script src="script.js"></script>
 </html>
