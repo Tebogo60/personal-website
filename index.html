@@ -26,32 +26,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- //Styles -->
 
-    <!-- -- Script --  -->
+    <!-- Script -->
     <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
-    <script>
-      $(document).ready(function(){
-        $('#open-navbar').click(function(){
-          $('.navigation').toggleClass('show')
-        });
-        
-        $('#open-navbar').click(function(){
-          $('.line1').toggleClass('show')
-          $('.line2').toggleClass('show')
-          $('.line3').toggleClass('show')
-        });
-      });
-
-      
-    </script>
+    <script src="script.js"></script>
     <!-- -- Script --  -->
   </head>
 
   <body>
     <div class="navbar">
       <nav>
-        <a href="index.html" class="brand">
+        <div class="brand">
           <h1>tj.</h1>
-        </a>
+        </div>
         <ul class="navigation">
           <li>
             <a href="#" class="nav-link">Home</a>
@@ -69,7 +55,6 @@
             <a href="#footer" class="nav-link">Get In Touch</a>
           </li>
         </ul>
-
         <ul class="bars-lines">
           <li>
             <button onclick="togglePopup()" id="open-navbar" class="bars">
@@ -107,13 +92,17 @@
       </div>
     </div>
 
+    <div class="return">
+      <a href="#" class="fa fa-arrow-up"></a>
+    </div>
+
     <div class="content">
       <section id="about" class="bg-about">
         <div class="container">
 
           <div class="row">
             <div class="col">
-              <h1 class="heading">About Me</h1><br/>
+              <h2 class="heading">About Me</h2><br/>
               <h5 class="text-color">Front End Web Developer</h5>
               <h1 class="sub-heading">Hi, My name is Tebogo Johannes Malebana</h1><br/>
               <p class="text-color">
@@ -126,7 +115,7 @@
                 stack Developer.
               </p>
               <br/><br/>
-              <a href="uploads/My Personal Cv.pdf" class="button" download>
+              <a href="uploads/My_Personal_Cv.pdf" class="button" download>
                 <i></i> Download CV
               </a>
             </div>
@@ -134,19 +123,17 @@
               <img src="images/about.png" alt="about_img">
             </div>
           </div>
-
         </div>
       </section>
 
       <section id="skills" class="bg-skills">
         <div class="container">
-
-          <h1 class="heading">Skills & Tools</h1><br/>
+          <h2 class="heading">Skills & Tools</h2><br/>
           <div class="row">             
             <div class="col">
               <div class="skill">
                 <div>
-                  <img src="images/icons/html.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/html.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>HTML</h5>
@@ -157,7 +144,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/css-3.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/css-3.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>CSS</h5>
@@ -168,7 +155,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/js.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/js.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>JAVASCRIPT</h5>
@@ -179,7 +166,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/php.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/php.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>PHP</h5>
@@ -190,7 +177,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/icons8-git.svg" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/icons8-git.svg" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>GIT</h5>
@@ -199,12 +186,11 @@
                   </div>
                 </div>
               </div>
-
             </div>              
             <div class="col">
               <div class="skill">
                 <div>
-                  <img src="images/icons/photoshop.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/photoshop.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>PHOTOSHOP</h5>
@@ -215,7 +201,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/illustrator.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/illustrator.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>iLLUSTRATOR</h5>
@@ -226,7 +212,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/xd.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/xd.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>ADOBE XD</h5>
@@ -237,7 +223,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/figma.png" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/figma.png" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>FIGMA</h5>
@@ -248,7 +234,7 @@
               </div>              
               <div class="skill">
                 <div>
-                  <img src="images/icons/bootstrap-solid.svg" alt="" class="icon_img" width="50px">
+                  <img src="images/icons/bootstrap-solid.svg" alt="" class="icon_img">
                 </div>
                 <div class="skill_icon">
                   <h5>BOOTSTRAP</h5>
@@ -257,38 +243,36 @@
                   </div>
                 </div>
               </div>
-
             </div> 
           </div>
-
         </div>
       </section>
 
       <section id="portfolio" class="bg-portfolio">
         <div class="container">
           <div class="portfolio">
-            <h1 class="heading">Portfolio</h1>
-            <h5>Here are a few designs project I've worked on recently. What to see more? Email me.</h5>
+            <h2 class="heading">Portfolio</h2>
+            <h5>Here are a few designs project I've worked on recently. Want to see more? Email me.</h5>
             <br/>
             <div class="row">
-              <div href="#" class="col port-1">
+              <div class="col port-1">
                 <div class="portfolio_info">
                   <p>Here is a project I did for an architect in my area and it shows my understanding of bootstrap.</p>
                   <a target=”_blank” href="https://www.creativeld.co.za/">Visit Site</a>
                 </div>
               </div>
 
-              <div href="#" class="col port-2">
+              <div class="col port-2">
                 <div class="portfolio_info">
-                  <p>Here is a blog type web design I did in photoshop thats showcase my phototyping skill.</p>
-                  <a href="https://drive.google.com/file/d/1va0RVbDgaK2UJDZqGplf6oOuJ7Qq25rO/view">Visit Site</a>
+                  <p>Here is a blog type web design I designed in photoshop and it shows my understanding of bootstrap.</p>
+                  <a href="https://tebogomalebana.github.io/media_type_website/">Visit Site</a>
                 </div>
               </div>
 
-              <div href="#" class="col port-3">
+              <div class="col port-3">
                 <div class="portfolio_info">
                   <p>Here is a minimulistic blog type website that shows my versatile design skills.</p>
-                  <a href="https://github.com/TebogoMalebana/demo-website">Visit Site</a>
+                  <a href="https://tebogomalebana.github.io/demo-website/">Visit Site</a>
                 </div>
               </div>
             </div>
@@ -301,7 +285,7 @@
           <div class="container">
 
               <div class="getintouch-container">
-                <h1 class="heading">Get In Touch</h1>
+                <h2 class="heading">Get In Touch</h2>
                   <br/>
                   <h2>Contact Details</h2><br/><br/>
                 <div class="row">
@@ -336,7 +320,6 @@
                       </button>
                     </form>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -344,9 +327,7 @@
 
         </div>
       </div>
-
     </div>
-
   </body>
 
   <section id="footer">
