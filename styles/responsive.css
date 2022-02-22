@@ -97,6 +97,10 @@
         position: fixed;
     }
 
+    nav .brand {
+        position: absolute;
+    }
+
     .navigation {
         position: fixed;
         width: calc(100% - 70px);
