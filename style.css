@@ -49,6 +49,7 @@ button {
 .heading {
   font-weight: 900;
   margin-bottom: 25px;
+  font-size: 25px;
 }
 
 .content {
@@ -76,7 +77,7 @@ nav {
 
 nav .brand {
   color: #030027;
-  flex: auto;
+  flex: 1;
   text-decoration: none;
   transition: .2s all ease-in-out;
 }
@@ -131,7 +132,7 @@ nav .brand {
   height: 3px;
   border-radius: 1.5px;
   position: absolute;
-  transition: .3s all ease-in-out;
+  transition: .7s all ease-in-out;
 }
 
 .line1 {
@@ -156,14 +157,39 @@ nav .brand {
   transform: rotate(135deg);
 }
 
+.icon_img {
+  width: 50px;
+}
+
+.return {
+  background-color: #DB7C26;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 9;
+}
+
+.return a {
+  color: #030027;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 15px;
+  text-decoration: none;
+}
 
 /* --- Jumbotron --- */
 
 .jumbotron {
+  position: relative;
   width: 100%;
   height: calc(100vh - 60px);
   background: linear-gradient(135deg, rgba(219,124,38,.5), rgba(3,0,39,.9));
   backdrop-filter: blur(5px);
+  z-index: 9;
 }
 
 .jumbo_text {
