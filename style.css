@@ -132,7 +132,7 @@ nav .brand {
   height: 3px;
   border-radius: 1.5px;
   position: absolute;
-  transition: .7s all ease-in-out;
+  transition: .3s all ease-in-out;
 }
 
 .line1 {
