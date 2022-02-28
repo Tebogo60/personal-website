@@ -108,14 +108,14 @@ nav .brand {
 
 .navigation li a {
   color: #030027;
-  font-size: 12px;
-  font-weight: 200;
+  font-size: 13px;
+  font-weight: 900;
   text-decoration: none;
-  transition: 0.3s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .navigation li a:hover {
-  color: #db7c26;
+  opacity: 0.5;
 }
 
 .bars {
