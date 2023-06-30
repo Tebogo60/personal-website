@@ -24,24 +24,46 @@
     <!-- //Fonts -->
 
     <!-- Styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="styles/responsive.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="styles/responsive.css" rel="stylesheet" />
     <!-- //Styles -->
   </head>
 
-  <body>
-    <div class="navbar">
-      <nav>
+  <body class="">
+    <nav>
+      <div class="contained-full">
+        <div class="left">
+          <a href="#" class="brand-name link"> tj. </a>
+        </div>
+        <div class="right">
+          <div class="theme-toggle">
+            <div class="light"><i class="far fa-sun"></i></div>
+            <div class="dark theme-active"><i class="far fa-moon"></i></div>
+          </div>
+          <div class="bars">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="nav-menu">
+            <ul>
+              <li>home</li>
+              <li>about</li>
+              <li>skills</li>
+              <li>portfolio</li>
+              <li>get in touch</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <section id="about">
         <div class="contained"></div>
-      </nav>
+      </section>
     </div>
 
-    <div class="return">
-      <a href="#" id="return-icon" class="fa fa-arrow-up"></a>
-    </div>
+    <script src="js/script.js"></script>
+    <script src="js/icon.js"></script>
   </body>
 </html>

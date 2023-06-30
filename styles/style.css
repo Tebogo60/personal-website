@@ -19,7 +19,13 @@ R O O T
   --yellow900: rgb(232, 210, 16);
   --blue900: rgb(27, 255, 192);
   --yellow900-grad: linear-gradient(90deg, var(--yellow900), rgb(246, 170, 28));
-  --blue900: linear-gradient(135deg, var(--blue900), rgb(18, 102, 79));
+  --blue900-grad: linear-gradient(135deg, var(--blue900), rgb(18, 102, 79));
+}
+
+.light-active {
+  --gray100: rgb(13, 13, 13);
+  --gray900: rgb(255, 255, 255);
+  --gray100-50: rgb(13, 13, 13, 0.5);
 }
 
 ::-webkit-scrollbar {
@@ -37,7 +43,7 @@ R O O T
 
 body {
   color: var(--gray100);
-  font-family: "kanit", sans-serif;
+  font-family: "Kanit", sans-serif;
   background: var(--gray900);
 }
 
@@ -47,8 +53,170 @@ R O O T
 
 -------------------------------------------------------------------------------------- */
 
+/* --------------------------------------------------------------------------------------
+
+S E T T I N G S
+
+-------------------------------------------------------------------------------------- */
+
 .contained {
   width: 992px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
+
+.contained-full {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.link {
+  color: var(--blue900);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------
+
+S E T T I N G S
+
+-------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------
+
+N A V I G A T I O N
+
+-------------------------------------------------------------------------------------- */
+
+nav {
+  background: var(--gray900);
+  position: absolute;
+  width: 100%;
+  height: 70px;
+}
+
+.brand-name {
+  color: var(--gray100);
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+}
+
+.bars {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  transform: translateY(-50%);
+
+  transition: 0.3s;
+}
+
+.bars span:nth-child(1) {
+  background: var(--gray100);
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: calc(50% - 5px);
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: 0.3s;
+}
+
+.bars span:nth-child(2) {
+  background: var(--gray100);
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  top: calc(50% + 5px);
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: 0.3s;
+}
+
+.bars-active span:nth-child(1) {
+  top: calc(50%);
+  transform: translateY(-50%) translateX(-50%) rotate(45deg);
+}
+
+.bars-active span:nth-child(2) {
+  top: calc(50%);
+  transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+}
+
+.theme-toggle {
+  font-size: 18px;
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid var(--gray100);
+  border-radius: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: 0.3s;
+}
+
+.theme-toggle .light,
+.theme-toggle .dark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1);
+  transition: 0.3s;
+}
+
+.theme-toggle .light {
+  left: 7px;
+}
+
+.theme-toggle .dark {
+  right: 7px;
+}
+
+.theme-toggle .theme-active {
+  transform: translateY(-50%) scale(0);
+}
+
+.nav-menu {
+  background: var(--gray900);
+  position: absolute;
+  top: 0;
+  left: -500px;
+  width: 500px;
+  height: 100vh;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.nav-menu ul {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  list-style: none;
+}
+
+.nav-menu ul li {
+  color: var(--gray100);
+  font-weight: 200;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.menu-active {
+  left: 0;
+}
+
+/* --------------------------------------------------------------------------------------
+
+N A V I G A T I O N
+
+-------------------------------------------------------------------------------------- */
