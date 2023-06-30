@@ -14,8 +14,11 @@ R O O T
 :root {
   --gray100-50: rgb(255, 255, 255, 0.5);
   --gray100: rgb(255, 255, 255);
+  --gray300: rgb(210, 210, 210);
+  --gray500: rgb(185, 185, 185);
+  --gray700: rgb(88, 88, 88);
   --gray900: rgb(13, 13, 13);
-  --box-shadow: 0 5px 10px rgb(0, 0, 0, 0.055);
+  --box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
   --yellow900: rgb(232, 210, 16);
   --blue900: rgb(27, 255, 192);
   --yellow900-grad: linear-gradient(90deg, var(--yellow900), rgb(246, 170, 28));
@@ -24,6 +27,9 @@ R O O T
 
 .light-active {
   --gray100: rgb(13, 13, 13);
+  --gray300: rgb(65, 65, 65);
+  --gray500: rgb(155, 155, 155);
+  --gray700: rgb(210, 210, 210);
   --gray900: rgb(255, 255, 255);
   --gray100-50: rgb(13, 13, 13, 0.5);
 }
@@ -47,6 +53,25 @@ body {
   background: var(--gray900);
 }
 
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border-bottom: var(--gray900);
+}
+
+p {
+  font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
 /* --------------------------------------------------------------------------------------
 
 R O O T
@@ -59,20 +84,119 @@ S E T T I N G S
 
 -------------------------------------------------------------------------------------- */
 
+.hidden {
+  display: none;
+}
+
+.header-large {
+  font-size: 75px;
+}
+
+.header-med {
+  font-size: 50px;
+}
+
+.header-small {
+  font-size: 40px;
+}
+
+.text-large {
+  font-size: 35px;
+}
+
+.text-med {
+  font-size: 25px;
+}
+
+.text-small {
+  font-size: 16px;
+}
+
+.color-900 {
+  color: var(--gray900);
+}
+
+.color-700 {
+  color: var(--gray700);
+}
+
+.color-500 {
+  color: var(--gray500);
+}
+
+.color-300 {
+  color: var(--gray300);
+}
+
+.color-100 {
+  color: var(--gray100);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  color: var(--gray100);
+  text-decoration: none;
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--gray100);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.button a {
+  color: var(--gray100);
+  font-weight: 400;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translateY(-50%) translateX(-50%);
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: var(--gray100);
+}
+
+.button:hover a {
+  color: var(--gray900);
+}
+
 .contained {
+  position: relative;
+  height: 100%;
   width: 992px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contained-full {
+  position: relative;
   width: 100%;
   height: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .link {
   color: var(--blue900);
   text-decoration: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 /* --------------------------------------------------------------------------------------
@@ -92,6 +216,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 70px;
+  z-index: 10;
 }
 
 .brand-name {
@@ -187,7 +312,7 @@ nav {
 
 .nav-menu {
   background: var(--gray900);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -500px;
   width: 500px;
@@ -218,5 +343,137 @@ nav {
 /* --------------------------------------------------------------------------------------
 
 N A V I G A T I O N
+
+-------------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------------
+
+S K I L L S
+
+-------------------------------------------------------------------------------------- */
+
+.skills .row {
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  align-items: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.skill-card {
+  position: relative;
+  background: var(--gray900);
+  font-size: 60px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 60px calc(100% - 70px);
+  gap: 30px;
+  align-items: center;
+  border: 1px solid var(--gray100);
+  border-radius: 20px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  z-index: 1;
+  box-shadow: var(--box-shadow);
+}
+
+.skill-card::after {
+  content: "";
+  background: var(--yellow900-grad);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 19px;
+  transition: 0.5s ease;
+  transform: scale(0);
+  z-index: -1;
+  box-shadow: var(--box-shadow);
+}
+
+.skill-card:hover::after {
+  transform: scale(1.1);
+}
+
+.skill-card:hover::before {
+  transform: scale(1.1);
+  animation: rotate 5s ease infinite;
+}
+
+.skill-card .skill-bg-bar {
+  transition: 0.3s ease;
+}
+
+.skill-card:hover .skill-bg-bar {
+  width: calc(100% - 30px);
+  height: 15px;
+  border: 1px solid var(--gray100);
+  margin-top: 10px;
+  border-radius: 7.5px;
+  padding: 1px;
+}
+
+.skill-info h5 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.skill-bar {
+  background: var(--gray100);
+  width: 0;
+  height: 100%;
+  border-radius: 5.5px;
+  transition: 1s ease;
+  transition-delay: 0.5s;
+  opacity: 0;
+}
+
+.skill-card:hover .html {
+  width: 95%;
+  opacity: 1;
+}
+
+.skill-card:hover .git {
+  width: 85%;
+  opacity: 1;
+}
+
+.skill-card:hover .css {
+  width: 95%;
+  opacity: 1;
+}
+
+.skill-card:hover .bootstrap {
+  width: 97%;
+  opacity: 1;
+}
+
+.skill-card:hover .javascript {
+  width: 75%;
+  opacity: 1;
+}
+
+.skill-card:hover .react {
+  width: 25%;
+  opacity: 1;
+}
+
+.skill-card:hover .php {
+  width: 50%;
+  opacity: 1;
+}
+
+.skill-card:hover .python {
+  width: 70%;
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------------------
+
+S K I L L S
 
 -------------------------------------------------------------------------------------- */
