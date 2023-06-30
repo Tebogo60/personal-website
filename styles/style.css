@@ -1,0 +1,54 @@
+/* --------------------------------------------------------------------------------------
+
+R O O T
+
+-------------------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --gray100-50: rgb(255, 255, 255, 0.5);
+  --gray100: rgb(255, 255, 255);
+  --gray900: rgb(13, 13, 13);
+  --box-shadow: 0 5px 10px rgb(0, 0, 0, 0.055);
+  --yellow900: rgb(232, 210, 16);
+  --blue900: rgb(27, 255, 192);
+  --yellow900-grad: linear-gradient(90deg, var(--yellow900), rgb(246, 170, 28));
+  --blue900: linear-gradient(135deg, var(--blue900), rgb(18, 102, 79));
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow900-grad);
+  border-radius: 3px;
+}
+
+body {
+  color: var(--gray100);
+  font-family: "kanit", sans-serif;
+  background: var(--gray900);
+}
+
+/* --------------------------------------------------------------------------------------
+
+R O O T
+
+-------------------------------------------------------------------------------------- */
+
+.contained {
+  width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
