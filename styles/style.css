@@ -80,6 +80,7 @@ h5 {
 .content {
   min-height: 100vh;
   max-height: auto;
+  backdrop-filter: blur(50px);
 }
 
 .link {
@@ -120,7 +121,6 @@ b {
   bottom: 0;
   right: -100px;
   border-radius: 50%;
-  -webkit-filter: blur(50px);
 }
 
 .bubbles span:nth-child(1) {
@@ -148,6 +148,7 @@ D R Y _ S E T T I N G S
 .grid {
   display: grid;
   grid-template-columns: auto auto;
+  gap: 25px;
 }
 
 .center-y {
@@ -209,7 +210,7 @@ D R Y _ S E T T I N G S
 }
 
 .blur {
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(50px);
 }
 
 .media-links {
@@ -299,8 +300,7 @@ N A V B A R _ S E T T I N G S
 
 nav {
   height: 65px;
-  padding: 0 15px;
-  z-index: 9;
+  z-index: 10;
 }
 
 nav .container-fluid {
@@ -314,11 +314,6 @@ nav .container-fluid {
   font-size: 30px;
   text-decoration: none;
   font-weight: 275;
-}
-
-.nav-right {
-  width: 139px;
-  gap: 25px;
 }
 
 .theme-toggler {
@@ -416,15 +411,9 @@ nav .container-fluid {
   transition: 0.3s;
 }
 
-.indicator span:hover {
-  background: var(--blue_300);
-  opacity: 0.75;
-  transform: scale(1.2);
-  border-radius: 50%;
-}
-
 .active_indicator {
   background: var(--blue_300);
+  border-radius: 50%;
 }
 
 .nav-menu {
@@ -445,12 +434,11 @@ nav .container-fluid {
 .menu-links {
   left: 25px;
   display: grid;
-  width: 100%;
   gap: 15px;
-  text-align: right;
+  transition: 0.3s;
 }
 
-.menu-links .menu-link {
+.menu-link {
   color: var(--blue_500);
   font-size: 25px;
   font-weight: 275;
@@ -459,29 +447,10 @@ nav .container-fluid {
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.3s;
-  width: fit-content;
 }
 
-.menu-links:hover .menu-link {
-  color: var(--blue_700);
-}
-
-.menu-links .menu-link:hover {
-  color: var(--blue_500);
-  padding: 0 0 0 15px;
-}
-
-.menu-links .menu-link::before {
-  content: "";
-  position: absolute;
-  background: var(--blue_700);
-  width: calc(100vw - 100% - 50px - 25px);
-  height: 1px;
-  top: 50%;
-  left: 0;
-  margin-left: calc(100% + 15px);
-  z-index: -1;
-  transition: 0.3s;
+.menu-link:hover {
+  color: var(--blue_100);
 }
 
 /* --------------------------------------------------------------------------------------

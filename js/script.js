@@ -87,6 +87,4 @@ window.addEventListener("scroll", () => {
       indicator.classList.add("active_indicator");
     }
   });
-
-  console.log(scrollValue);
 });
