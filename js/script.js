@@ -1,59 +1,60 @@
-const navbar = document.querySelector("nav");
-const themeToggle = document.querySelector(".theme-toggler");
-const themeToggler = document.querySelector(".toggle");
+const body = document.querySelector("body");
 const menu = document.querySelector(".nav-menu");
-const moon = document.querySelector(".moon");
-const sun = document.querySelector(".sun");
-const bars = document.querySelector(".bars");
-const menuLink = document.querySelectorAll(".menu-link");
 
-let lightActive = false;
-let menuActive = false;
+// -- this code changes the site theme when toggle button is clicked.
 
-const changeTheme = () => {
-  sun.classList.toggle("active_theme");
-  moon.classList.toggle("active_theme");
-  themeToggler.classList.toggle("active_sun");
-  themeToggler.classList.toggle("active_moon");
+const themeToggle = document.querySelector(".theme-toggle");
+let savedTheme = localStorage.getItem("theme");
 
-  if (lightActive === true) {
-    lightActive = true;
+const themeChange = () => {
+  if (themeToggle.innerHTML.indexOf("on") > -1) {
+    themeToggle.innerHTML = `<i class="las la-toggle-off"></i>`;
+    body.classList.add("light");
+
+    // -- This code saves the user's preferred theme to local storage.
+    localStorage.setItem("theme", "light");
   } else {
-    lightActive = false;
+    themeToggle.innerHTML = `<i class="las la-toggle-on"></i>`;
+    body.classList.remove("light");
+
+    // -- This code saves the user's preferred theme to local storage.
+    localStorage.setItem("theme", "dark");
   }
 };
 
+if (savedTheme === "light") {
+  setTimeout(themeChange, 500);
+}
+
 themeToggle.addEventListener("click", () => {
-  changeTheme();
+  setTimeout(themeChange, 500);
 });
+
+// -- This code open the menu when bars are clicked.
+
+const menuToggle = document.querySelector(".bars");
+const menuLink = document.querySelectorAll(".menu-link");
+const navMenu = document.querySelector(".nav-menu");
+
+const collapseMenu = () => {
+  navMenu.classList.toggle("menu-active");
+  body.classList.toggle("remove-scrollbar");
+};
 
 menuLink.forEach((e) => {
   e.addEventListener("click", () => {
-    openMenu();
+    setTimeout(collapseMenu, 500);
   });
 });
 
-bars.addEventListener("click", () => {
-  openMenu();
+menuToggle.addEventListener("click", () => {
+  setTimeout(collapseMenu, 500);
 });
 
-const openMenu = () => {
-  bars.classList.toggle("active_bars");
-  menu.classList.toggle("active_menu");
-};
-
-window.addEventListener("scroll", () => {
-  let scrollValue = window.scrollY;
-
-  if (scrollValue > 69) {
-    navbar.classList.add("blur");
-  } else {
-    navbar.classList.remove("blur");
-  }
-});
+// This code indicates current viewport window.
 
 const sections = document.querySelectorAll("section");
-const indicators = document.querySelectorAll(".indicator span");
+const indicators = document.querySelectorAll(".indicator a");
 const sectionIdsArr = [];
 const sectionHeightsArr = [];
 

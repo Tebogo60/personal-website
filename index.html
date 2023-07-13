@@ -8,54 +8,35 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/line-awesome.css" />
   </head>
-  <body>
-    <div class="bubbles">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
+  <body class="">
     <div class="left center-y indicator position-fixed">
-      <span class="home active_indicator"></span>
-      <span class="about_me"></span>
-      <span class="experience"></span>
-      <span class="projects"></span>
-      <span class="getintouch"></span>
+      <a href="#home" class="home active_indicator"></a>
+      <a href="#about_me" class="about_me"></a>
+      <a href="#experience" class="experience"></a>
+      <a href="#projects" class="projects"></a>
+      <a href="#getintouch" class="getintouch"></a>
     </div>
 
-    <nav class="fixed-top p-3 py-0">
-      <div
-        class="container-fluid grid justify-content-between align-content-center"
-      >
-        <div>
-          <a href="" class="nav-brand link">tj</a>
-        </div>
-        <div class="align-content-center grid">
-          <span class="theme-toggler grid">
-            <span class="moon active_theme">
-              <i class="far fa-moon"></i>
-            </span>
-            <span class="toggler rounded-pill">
-              <div class="center-y toggle active_moon rounded-pill"></div>
-            </span>
-            <span class="sun">
-              <i class="far fa-sun"></i>
-            </span>
-          </span>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand color-100">tj</a>
 
-          <div class="bars">
-            <span class="center-y"></span>
-            <span class="center-y"></span>
-            <span class="center-y"></span>
-          </div>
-        </div>
+        <span class="navbar-toggle color-100">
+          <span class="theme-toggle">
+            <i class="las la-toggle-on"></i>
+          </span>
+          <span class="ms-3 bars">
+            <i class="las la-bars"></i>
+          </span>
+        </span>
       </div>
     </nav>
 
     <div class="nav-menu blur">
       <div class="center-y menu-links p-3">
-        <a class="menu-link" href="#">home</a>
+        <a class="menu-link" href="#home">home</a>
         <a class="menu-link" href="#about_me">about</a>
         <a class="menu-link" href="#experience">experience</a>
         <a class="menu-link" href="#projects">projects</a>
@@ -65,203 +46,212 @@
 
     <main class="content">
       <section id="home">
-        <div class="bg-body-tertiary centered">
-          <div class="container">
-            <div class="center-y p-5 pt-5">
-              <h1 class="color-100">
-                Full-Stack Web <br />
-                Developer
-              </h1>
-              <p class="color-500">
-                Building Digital Dreams, One Line of Code at a Time!
-              </p>
-              <a href="#about_me" class="link">
-                <span>about <b>Me</b></span>
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <div class="container">
+          <div class="center-y m-3 ms-4">
+            <h1 class="color-100">
+              Full-Stack Web <br />
+              Developer
+            </h1>
+            <p class="color-500">
+              Building Digital Dreams, One Line of Code at a Time!
+            </p>
+            <a href="#about_me" class="link">
+              <span>about <b class="color-300">Me</b></span>
+              <i class="las la-arrow-right"></i>
+            </a>
+
+            <div class="media-links mt-5">
+              <a
+                href="https://www.facebook.com/johannes.malebana.16/"
+                target="_blank"
+              >
+                <i class="lab la-facebook"></i>
+              </a>
+              <a href="https://github.com/Tebogo60" target="_blank">
+                <i class="lab la-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/johannes60_za/"
+                target="_blank"
+              >
+                <i class="lab la-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
+                target="_blank"
+              >
+                <i class="lab la-linkedin"></i>
               </a>
             </div>
           </div>
         </div>
-
-        <div class="media-links ps-5">
-          <span>
-            <i class="fab fa-facebook-f"></i>
-          </span>
-          <span>
-            <i class="fab fa-github"></i>
-          </span>
-          <span>
-            <i class="fab fa-instagram"></i>
-          </span>
-          <span>
-            <i class="fab fa-linkedin-in"></i>
-          </span>
-        </div>
       </section>
 
       <section id="about_me">
-        <div class="container pt-50">
-          <div class="color-500 ps-5">
+        <div class="container">
+          <div class="color-500 pt-50 ms-4">
             <h1 class="color-100">Hi! I'm Tebogo,</h1>
-            <p>
-              A freelance full-stack web developer with a passion for crafting
-              exceptional online experiences. I specialize in HTML, CSS,
-              JavaScript, Java, Python, and more.
-            </p>
-            <p>
-              I offer tailored web development solutions to help businesses
-              thrive in the digital realm. As a freelancer, I bring flexibility,
-              efficiency, and a commitment to client satisfaction. I take pride
-              in understanding your unique requirements and translating them
-              into visually appealing and functional websites.
-            </p>
-            <p>
-              Whether you need a responsive design, seamless user experience, or
-              robust back-end systems, I have the skills and expertise to
-              deliver outstanding results.
-            </p>
+            <div class="row">
+              <div class="col-md-9">
+                <p>
+                  A freelance full-stack web developer with a passion for
+                  crafting exceptional online experiences. I specialize in HTML,
+                  CSS, JavaScript, Java, Python, and more.
+                </p>
+                <p>
+                  I offer tailored web development solutions to help businesses
+                  thrive in the digital realm. As a freelancer, I bring
+                  flexibility, efficiency, and a commitment to client
+                  satisfaction. I take pride in understanding your unique
+                  requirements and translating them into visually appealing and
+                  functional websites.
+                </p>
+                <p>
+                  Whether you need a responsive design, seamless user
+                  experience, or robust back-end systems, I have the skills and
+                  expertise to deliver outstanding results.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="experience">
-        <div class="container pt-50">
-          <div class="color-500 ps-5">
+        <div class="container">
+          <div class="color-500 pt-50 ms-4">
             <h1 class="color-100">Experience</h1>
             <p>Unlocking Digital Potential: Explore My Proficiencies Below.</p>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
+            <div class="row">
+              <div class="col-md-3">
                 <div class="card">
                   <div class="card-body">
                     <p class="card-text">
-                      <b>2022 - 2022</b><br />
-                      I completed the AWS re/Start online course, which taught
-                      me how to deploy, configure, monitor, and support AWS
-                      services. I also learned how to write Python and Shell
-                      scripts. This experience gave me the skills and knowledge
-                      I need to be a successful cloud engineer.
+                      <span>2021 - Present</span><br />
+                      <b class="color-100"> AWS Cloud Practitioner </b><br />
+                      I am a certified AWS Cloud Practitioner with experience
+                      using AWS services in my projects. I am proficient in AWS
+                      services such as EC2, S3, RDS, and Lambda. I am also
+                      familiar with the AWS Cloud Development Kit (CDK) and the
+                      AWS Serverless Framework.
                     </p>
 
                     <div
                       class="d-flex justify-content-between align-items-center"
                     >
                       <div class="btn-group-sm">
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
+                        <span class="btn tag rounded-pill mt-2">
                           <span class="me-2">
-                            <i class="fab fa-python"></i>
+                            <i class="lab la-aws"></i>
                           </span>
-                          Python
-                        </a>
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-python"></i>
-                          </span>
-                          Java
-                        </a>
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-linux"></i>
-                          </span>
-                          Linux
-                        </a>
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fas fa-terminal"></i>
-                          </span>
-                          Shell
-                        </a>
+                          1x AWS Certified
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col">
+              <div class="col-md-3">
                 <div class="card">
                   <div class="card-body">
                     <p class="card-text">
-                      <b>2022 - Present</b><br />
-                      I am a certified Cloud Practitioner with experience in
-                      deploying and managing AWS services. I gained this
-                      knowledge and skill through the AWS re/Start online
-                      course, which also taught me how to host websites of all
-                      types, from static to dynamic.
+                      <span>2021 - Present</span><br />
+                      <b class="color-100"> Back-end </b><br />
+                      I'm a skilled back-end web developer with experience in
+                      PHP, Node.js, and MySQL. I'm also familiar with the basics
+                      of back-end development, such as API development and
+                      database design.
                     </p>
 
                     <div
                       class="d-flex justify-content-between align-items-center"
                     >
                       <div class="btn-group-sm">
-                        <a href="#" class="btn btn-neon rounded-pill">
+                        <span class="btn tag rounded-pill mt-2">
                           <span class="me-2">
-                            <i class="fab fa-aws"></i>
+                            <i class="lab la-aws"></i>
                           </span>
-                          Certified AWS Cloud Practitioner
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                          1x AWS Certified
+                        </span>
 
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <b>2020 - 2021</b><br />
-                      I attended a web development bootcamp where I learned the
-                      fundamentals of UI/UX design, web page structure, and
-                      basic scripting. I learned how to use these skills to
-                      improve the interactivity of web pages. I also learned how
-                      to use HTML, CSS, and JavaScript to create interactive
-                      features that would keep users engaged.
-                    </p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
+                        <span class="btn tag rounded-pill mt-2">
                           <span class="me-2">
-                            <i class="fab fa-html5"></i>
-                          </span>
-                          HTML
-                        </a>
-
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-css3-alt"></i>
-                          </span>
-                          CSS
-                        </a>
-
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-js"></i>
-                          </span>
-                          JavaScript
-                        </a>
-
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-node-js"></i>
-                          </span>
-                          Node.js
-                        </a>
-
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-bootstrap"></i>
-                          </span>
-                          Bootstrap
-                        </a>
-
-                        <a href="#" class="btn btn-neon rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="fab fa-php"></i>
+                            <i class="lab la-php"></i>
                           </span>
                           PHP
-                        </a>
+                        </span>
+
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-2">
+                            <i class="lab la-node-js"></i>
+                          </span>
+                          Node.js
+                        </span>
+
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-2">
+                            <i class="las la-server"></i>
+                          </span>
+                          MySQL
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">
+                      <span>2022 - Present</span><br />
+                      <b class="color-100"> Front-end </b><br />
+                      I'm a proficient front-end web developer with experience
+                      in HTML, CSS, JavaScript, and the latest web development
+                      frameworks, such as React and bootstrap. I've also
+                      developed responsive websites that work well on all
+                      devices.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="btn-group-sm">
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-1">
+                            <i class="lab la-html5"></i>
+                          </span>
+                          HTML5
+                        </span>
+
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-1">
+                            <i class="lab la-css3"></i>
+                          </span>
+                          CSS3
+                        </span>
+
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-1">
+                            <i class="lab la-js-square"></i>
+                          </span>
+                          JavaScript
+                        </span>
+
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-1">
+                            <i class="lab la-bootstrap"></i>
+                          </span>
+                          Bootstrap
+                        </span>
+
+                        <span class="btn tag rounded-pill mt-2">
+                          <span class="me-1">
+                            <i class="lab la-react"></i>
+                          </span>
+                          React
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -273,16 +263,16 @@
       </section>
 
       <section id="projects">
-        <div class="container pt-50">
-          <div class="color-500 ps-5">
+        <div class="container">
+          <div class="color-500 pt-50 ms-4">
             <h1 class="color-100">Projects</h1>
-            <p>
-              My below projects showcase my skills in web development and user
-              interface design, using HTML, CSS, and JavaScript.
+            <p class="text-capitalize">
+              Discover My Digital Footprint: Explore My Captivating Projects
+              Below.
             </p>
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
+            <div class="row">
+              <div class="col-md-3">
                 <div class="card">
                   <div class="card-body">
                     <div class="card-img mb-3">
@@ -307,6 +297,7 @@
                         <a
                           href="https://tebogo60.github.io/tic_tac_toe/"
                           class="btn p-3 pt-1 pb-1 rounded-pill btn-neon"
+                          target="_blank"
                         >
                           Visit Site
                         </a>
@@ -316,7 +307,7 @@
                 </div>
               </div>
 
-              <div class="col">
+              <div class="col-md-3">
                 <div class="card">
                   <div class="card-body">
                     <div class="card-img mb-3">
@@ -342,36 +333,7 @@
                         <a
                           href="https://tebogo60.github.io/calculator/"
                           class="btn p-3 pt-1 pb-1 rounded-pill btn-neon"
-                        >
-                          Visit Site
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-img mb-3">
-                      <img
-                        src="uploads/tic-tac-toe.jpg"
-                        alt=""
-                        class="img-fluid center"
-                      />
-                    </div>
-                    <h5 class="color-100">Tic tac toe</h5>
-                    <p class="card-text">
-                      Level up Your Game: Experience Tic Tac Toe Reinvented!
-                    </p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <a
-                          href=""
-                          class="btn p-3 pt-1 pb-1 rounded-pill btn-neon"
+                          target="_blank"
                         >
                           Visit Site
                         </a>
@@ -386,42 +348,45 @@
       </section>
 
       <section id="getintouch">
-        <div class="container pt-50">
-          <div class="color-500 ps-5">
+        <div class="container">
+          <div class="color-500 pt-50 ms-4">
             <h1 class="color-100">Get In Touch</h1>
             <p class="text-capitalize">
               Lets collaborate and create digital magic reach out to ignite your
               next project.
             </p>
 
-            <div class="list-group">
-              <div class="card mb-3">
-                <div class="p-3">
-                  <h6 class="mb-0 color-500">Email Address:</h6>
-                  <p class="mb-0 color-500 opacity-75">
-                    tebogomalebana.tm@gmail.com
-                  </p>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="card mb-3">
+                  <div class="p-3">
+                    <h6 class="mb-0 color-500">Email Address:</h6>
+                    <p class="mb-0 color-500 opacity-75">
+                      tebogomalebana.tm@gmail.com
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div class="card mb-3">
-                <div class="p-3">
-                  <h6 class="mb-0 color-500">WhatsApp:</h6>
-                  <p class="mb-0 color-500 opacity-75">+27 67 057 2758</p>
+                <div class="card mb-3">
+                  <div class="p-3">
+                    <h6 class="mb-0 color-500">WhatsApp:</h6>
+                    <p class="mb-0 color-500 opacity-75">+27 67 057 2758</p>
+                  </div>
                 </div>
-              </div>
 
-              <a
-                href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
-                class="card mb-3 text-decoration-none"
-              >
-                <div class="p-3">
-                  <h6 class="mb-0 color-500">Linkedin:</h6>
-                  <p class="mb-0 color-500 opacity-75">
-                    https://www.linkedin.com/in/tebogo-malebana-47b640249/
-                  </p>
-                </div>
-              </a>
+                <a
+                  href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
+                  class="card mb-3 text-decoration-none"
+                  target="_blank"
+                >
+                  <div class="p-3">
+                    <h6 class="mb-0 color-500">Linkedin:</h6>
+                    <p class="mb-0 color-500 opacity-75">
+                      https://www.linkedin.com/in/tebogo-malebana-47b640249/
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -432,11 +397,9 @@
           <p class="color-500 px-5">
             <small>
               <small>
-                Designed in <b>Figma</b> and meticulously coded in
-                <b>Visual Studio Code</b> by yours truly. Built with
-                <b>Bootstrap</b> for a responsive and dynamic experience,
-                deployed with <b>Github</b>. All text is beautifully set in the
-                <b>Kanit</b> font.
+                Designed in <b>Figma</b>, coded in <b>Visual Studio Code</b>,
+                and built with <b>Bootstrap</b>. Deployed with <b>GitHub</b> and
+                set in <b>Inter</b> font.
               </small>
             </small>
           </p>
@@ -444,7 +407,6 @@
       </footer>
     </main>
 
-    <script src="js/icon.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
