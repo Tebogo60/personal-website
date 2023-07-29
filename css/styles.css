@@ -1,5 +1,17 @@
 @import url(root_colors.css);
 
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blue-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue-100);
+}
+
 body {
   font-size: 16px;
   font-weight: 400;
@@ -21,7 +33,7 @@ section .container {
   position: relative;
   min-height: 100vh;
   max-height: auto;
-  padding: 25px;
+  padding: 100px 25px;
 
   display: flex;
   align-items: center;
@@ -58,7 +70,7 @@ section .row {
 }
 
 .blur {
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(10px);
 }
 
 .link {
