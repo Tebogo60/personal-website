@@ -86,7 +86,6 @@ section .row {
 .button {
   color: var(--blue-100);
   text-decoration: none;
-  /* text-transform: lowercase; */
 
   display: flex;
   width: 125px;
@@ -189,42 +188,44 @@ section .row {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.s_card::before {
-  content: "";
+@media (width >= 768) {
+  .s_card::before {
+    content: "";
 
-  position: absolute;
-  width: calc(50% - 1px);
-  height: 1px;
-  top: 0;
-  left: 50%;
+    position: absolute;
+    width: calc(50% - 1px);
+    height: 1px;
+    top: 0;
+    left: 50%;
 
-  background: linear-gradient(90deg, transparent, var(--blue-300));
-  transition: 1s;
-  opacity: 0;
-}
+    background: linear-gradient(90deg, transparent, var(--blue-300));
+    transition: 1s;
+    opacity: 0;
+  }
 
-.s_card::after {
-  content: "";
+  .s_card::after {
+    content: "";
 
-  position: absolute;
-  width: 1px;
-  height: 50%;
-  top: 0;
-  right: 0;
+    position: absolute;
+    width: 1px;
+    height: 50%;
+    top: 0;
+    right: 0;
 
-  background: linear-gradient(0deg, transparent, var(--blue-300));
-  transition: 1s;
-  opacity: 0;
-}
+    background: linear-gradient(0deg, transparent, var(--blue-300));
+    transition: 1s;
+    opacity: 0;
+  }
 
-.s_card:hover::before {
-  transition-delay: 0.5s;
-  opacity: 1;
-}
+  .s_card:hover::before {
+    transition-delay: 0.5s;
+    opacity: 1;
+  }
 
-.s_card:hover::after {
-  transition-delay: 0.5s;
-  opacity: 1;
+  .s_card:hover::after {
+    transition-delay: 0.5s;
+    opacity: 1;
+  }
 }
 
 .s_card p i {
@@ -247,11 +248,6 @@ section .row {
   transition: 0.5s;
 }
 
-.p_card:hover .p_card_img {
-  transition-delay: 0.5s;
-  height: 125px;
-}
-
 .p_card .p_card_img img {
   position: absolute;
   width: 100%;
@@ -261,8 +257,15 @@ section .row {
   transition: 0.5s;
 }
 
-.p_card:hover .p_card_img img {
-  transform: translate(-50%, -50%) rotate(-25deg) scale(1.2);
+@media (width >= 997) {
+  .p_card:hover .p_card_img {
+    transition-delay: 0.5s;
+    height: 135px;
+  }
+
+  .p_card:hover .p_card_img img {
+    transform: translate(-50%, -50%) rotate(-25deg) scale(1.2);
+  }
 }
 
 .tag {
