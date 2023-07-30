@@ -151,12 +151,14 @@ section .row {
 }
 
 .social_media a {
+  color: var(--blue-500);
+  font-size: 20px;
+  line-height: 20px;
   transition: 0.3s;
   opacity: 1;
 }
 
 .social_media a:hover {
-  color: var(--blue-100);
   opacity: 0.5;
 }
 
@@ -322,6 +324,7 @@ section .row {
 
 .return svg {
   flex-shrink: 0;
+  stroke: var(--blue-100);
 }
 /* --------------------------------------------------------------------------------------
 
