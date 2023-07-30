@@ -188,15 +188,15 @@ section .row {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-@media (width >= 768) {
+@media (min-width: 768px) {
   .s_card::before {
     content: "";
 
     position: absolute;
-    width: calc(50% - 1px);
+    width: calc(100% - 1px);
     height: 1px;
     top: 0;
-    left: 50%;
+    left: 0;
 
     background: linear-gradient(90deg, transparent, var(--blue-300));
     transition: 1s;
@@ -208,7 +208,7 @@ section .row {
 
     position: absolute;
     width: 1px;
-    height: 50%;
+    height: 100%;
     top: 0;
     right: 0;
 
@@ -218,11 +218,14 @@ section .row {
   }
 
   .s_card:hover::before {
+    width: calc(50% - 1px);
+    left: 50%;
     transition-delay: 0.5s;
     opacity: 1;
   }
 
   .s_card:hover::after {
+    height: 50%;
     transition-delay: 0.5s;
     opacity: 1;
   }
@@ -257,7 +260,7 @@ section .row {
   transition: 0.5s;
 }
 
-@media (width >= 997) {
+@media (min-width: 997px) {
   .p_card:hover .p_card_img {
     transition-delay: 0.5s;
     height: 135px;
