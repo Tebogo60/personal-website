@@ -51,6 +51,7 @@ section .row {
 .circle {
   position: absolute;
   border-radius: 50%;
+  opacity: 0.25;
 }
 
 @keyframes circleAnimation {
