@@ -1,7 +1,7 @@
 @import url(root_colors.css);
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -54,22 +54,6 @@ section .row {
   opacity: 0.25;
 }
 
-@keyframes circleAnimation {
-  0% {
-    opacity: 0;
-    margin: 0;
-  }
-  50% {
-    opacity: 0.5;
-    margin-top: 100px;
-    margin-left: 50px;
-  }
-  100% {
-    opacity: 0;
-    margin: 0;
-  }
-}
-
 .blur {
   backdrop-filter: blur(10px);
 }
@@ -84,6 +68,84 @@ section .row {
   color: var(--blue-500);
 }
 
+.indicator_track {
+  background: var(--blue-500);
+  position: fixed;
+  width: 2px;
+  height: 250px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+
+  cursor: pointer;
+  z-index: 10;
+}
+
+.indicator_track::after {
+  content: "";
+  background: var(--blue-900);
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  left: 2px;
+}
+
+.indicator {
+  background: var(--blue-100);
+  position: absolute;
+  width: 2px;
+  height: 50px;
+}
+
+.indicator_sections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.indicator_sections span {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  width: 150px;
+  padding: 13px 0 13px 15px;
+  background: var(--blue-100);
+  right: -158px;
+  opacity: 0;
+}
+
+.pop_indicator {
+  animation: indicator_sections_pop 2.5s ease;
+}
+
+@keyframes indicator_sections_pop {
+  0% {
+    right: -158px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    right: 2px;
+  }
+  100% {
+    right: -158px;
+    opacity: 0;
+  }
+}
+
+@keyframes Animate_button {
+  0% {
+    width: 125px;
+  }
+  50% {
+    width: 140px;
+  }
+  100% {
+    width: 125px;
+  }
+}
+
 .button {
   color: var(--blue-100);
   text-decoration: none;
@@ -95,13 +157,6 @@ section .row {
   align-items: center;
 
   transition: 0.3s;
-}
-
-.button:hover {
-  color: var(--blue-100);
-  width: 135px;
-
-  opacity: 0.75;
 }
 
 .button span b {
@@ -288,13 +343,25 @@ section .row {
   cursor: pointer;
 }
 
+@keyframes Animate_return_button {
+  0% {
+    gap: 50px;
+  }
+  50% {
+    gap: 65px;
+  }
+  100% {
+    gap: 50px;
+  }
+}
+
 .return {
   color: var(--blue-100);
   text-decoration: none;
 
-  position: absolute;
+  position: fixed;
   bottom: 50px;
-  right: 0;
+  right: 10px;
 
   display: inline-flex;
   height: auto;
@@ -304,11 +371,15 @@ section .row {
   flex-shrink: 0;
 
   transition: 0.3s;
+  z-index: 10;
+
+  animation: Animate_return_button 1.2s linear infinite;
 }
 
-.return:hover {
+.return:hover,
+.button:hover {
   color: var(--blue-100);
-  gap: 50px;
+  opacity: 0.5;
 }
 
 .return span {
@@ -327,6 +398,7 @@ section .row {
   flex-shrink: 0;
   stroke: var(--blue-100);
 }
+
 /* --------------------------------------------------------------------------------------
 
 N A V I G A T I O N
