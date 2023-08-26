@@ -127,6 +127,7 @@ section .row {
   color: var(--blue-100);
   text-decoration: none;
 
+  font-size: 14px;
   display: flex;
   width: 125px;
   padding: 5px 0px;
