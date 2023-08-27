@@ -26,6 +26,19 @@ main {
   backdrop-filter: blur(50px);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+p {
+  color: var(--blue-100);
+  font-weight: normal;
+}
+
 b {
   font-weight: 700;
 }
@@ -127,7 +140,7 @@ section .row {
   color: var(--blue-100);
   text-decoration: none;
 
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
   width: 125px;
   padding: 5px 0px;
@@ -137,8 +150,8 @@ section .row {
   transition: 0.3s;
 }
 
-.button span b {
-  text-transform: capitalize;
+.button b {
+  text-transform: uppercase;
 }
 
 .button svg {
@@ -372,7 +385,7 @@ section .row {
 }
 
 .return span b {
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .return svg {
