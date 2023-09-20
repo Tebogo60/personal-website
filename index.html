@@ -5,123 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tebogo Malebana</title>
 
-    <link rel="icon" href="uploads/letter-t.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
-    />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
-    <!-- <link rel="stylesheet" href="css/line-awesome.css" /> -->
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/responsive.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="css/root_colors.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="">
-    <div class="left center-y indicator position-fixed">
-      <a href="#home" class="home active_indicator"></a>
-      <a href="#about_me" class="about_me"></a>
-      <a href="#experience" class="experience"></a>
-      <a href="#projects" class="projects"></a>
-      <a href="#getintouch" class="getintouch"></a>
+  <body class="123">
+    <a href="#" class="return opacity-0">
+      <i class="fas fa-arrow-down" style="rotate: 180deg"></i>
+      <span>back <b>Top</b></span>
+    </a>
+
+    <div class="bg_box">
+      <div class="boxes"></div>
     </div>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container">
-        <a href="#" class="navbar-brand color-100">tj</a>
+    <div class="indicator_track">
+      <div class="indicator"></div>
+    </div>
 
-        <span class="navbar-toggle color-100">
-          <span class="theme-toggle">
-            <i class="las la-toggle-on"></i>
-          </span>
-          <span class="ms-3 bars">
-            <i class="las la-bars"></i>
-          </span>
-        </span>
+    <nav class="navbar navbar-expand-sm fixed-top blur">
+      <div class="container">
+        <div class="navbar-brand text-blue-100">
+          <span class="brand_logo"></span>
+          <a href="#"> <b>Tebogo</b> Malebana </a>
+        </div>
       </div>
     </nav>
 
-    <div class="nav-menu blur">
-      <div class="center-y menu-links p-3">
-        <a class="menu-link" href="#home">home</a>
-        <a class="menu-link" href="#about_me">about</a>
-        <a class="menu-link" href="#experience">experience</a>
-        <a class="menu-link" href="#projects">projects</a>
-        <a class="menu-link" href="#getintouch">get in touch</a>
-      </div>
-    </div>
-
-    <main class="content">
-      <section id="home">
+    <main>
+      <section id="jumbotron">
         <div class="container">
-          <div class="center-y m-3 ms-4">
-            <h1 class="color-100">
-              Full-Stack Web <br />
-              Developer
-            </h1>
-            <p class="color-500">
-              Building Digital Dreams, One Line of Code at a Time!
-            </p>
-            <a href="#about_me" class="link">
-              <span>about <b class="color-300">Me</b></span>
-              <i class="las la-arrow-right"></i>
-            </a>
-
-            <div class="media-links mt-5">
-              <a
-                href="https://www.facebook.com/johannes.malebana.16/"
-                target="_blank"
-              >
-                <i class="lab la-facebook"></i>
-              </a>
-              <a href="https://github.com/Tebogo60" target="_blank">
-                <i class="lab la-github"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/johannes60_za/"
-                target="_blank"
-              >
-                <i class="lab la-instagram"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
-                target="_blank"
-              >
-                <i class="lab la-linkedin"></i>
-              </a>
+          <div class="row">
+            <div class="jumbo-grid">
+              <div class="small text-blue-100">
+                <span></span>
+                FULL-STACK
+              </div>
+              <h1 class="heading">
+                <span>WEB</span>
+                <span>DEVELOPER.</span>
+              </h1>
+              <h3 class="sub-heading">
+                Building Digital Dreams, One Line of Code at a Time!
+              </h3>
+              <div class="jumbo_btns">
+                <a href="#about" class="button text-blue-100">
+                  <span>about <b>Me</b></span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#getintouch" class="button text-blue-100">
+                  <span>get in <b>Touch</b></span>
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about_me">
+      <section id="about">
         <div class="container">
-          <div class="color-500 pt-50 ms-4">
-            <h1 class="color-100">Hi! I'm Tebogo,</h1>
-            <div class="row">
-              <div class="col-md-9">
-                <p>
-                  A freelance full-stack web developer with a passion for
-                  crafting exceptional online experiences. I specialize in HTML,
-                  CSS, JavaScript, Java, Python, and more.
-                </p>
-                <p>
-                  I offer tailored web development solutions to help businesses
-                  thrive in the digital realm. As a freelancer, I bring
-                  flexibility, efficiency, and a commitment to client
-                  satisfaction. I take pride in understanding your unique
-                  requirements and translating them into visually appealing and
-                  functional websites.
-                </p>
-                <p>
-                  Whether you need a responsive design, seamless user
-                  experience, or robust back-end systems, I have the skills and
-                  expertise to deliver outstanding results.
-                </p>
+          <div class="row justify-content-end">
+            <h1 class="heading left-heading">
+              <span>ABOUT</span>
+              <span>ME</span>
+            </h1>
+
+            <div class="col-md-6 about-text text-blue-100">
+              <div class="social_media">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/johannes.malebana.16/"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a target="_blank" href="https://github.com/Tebogo60">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/johannes60_za/"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
               </div>
+              <br />
+
+              <p>
+                Hi, I am Tebogo Malebana, a freelance full-stack web developer
+                with a passion for crafting exceptional online experiences. I
+                specialize in HTML5, CSS3, JavaScript and Python.
+              </p>
+              <p>
+                I am passionate about creating beautiful and functional websites
+                that meet the needs of my clients. I am also a team player and
+                always willing to learn new things.
+              </p>
+              <p>
+                I offer tailored web development solutions to help businesses
+                thrive in the digital realm. As a freelancer and certified AWS
+                Cloud Practitioner, I bring flexibility, efficiency, and a
+                commitment to client satisfaction. I take pride in understanding
+                your unique requirements and translating them into visually
+                appealing and functional websites.
+              </p>
+
+              <a href="#experience" class="button text-blue-100">
+                <span>expe<b>Rience</b></span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#projects" class="button text-blue-100">
+                <span>pro<b>Jects</b></span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -129,143 +145,55 @@
 
       <section id="experience">
         <div class="container">
-          <div class="color-500 pt-50 ms-4">
-            <h1 class="color-100">Experience</h1>
-            <p>Unlocking Digital Potential: Explore My Proficiencies Below.</p>
-
-            <div class="row">
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>2021 - Present</span><br />
-                      <b class="color-100"> AWS Cloud Practitioner </b><br />
-                      I am a certified AWS Cloud Practitioner with experience
-                      using AWS services in my projects. I am proficient in AWS
-                      services such as EC2, S3, RDS, and Lambda. I am also
-                      familiar with the AWS Cloud Development Kit (CDK) and the
-                      AWS Serverless Framework.
-                    </p>
-
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="lab la-aws"></i>
-                          </span>
-                          1x AWS Certified
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="row">
+            <h1 class="heading">
+              <span>EXPE-</span>
+              <span>RIENCE</span>
+            </h1>
+            <h3 class="sub-heading">
+              Unlocking Digital Potential: Explore My Proficiencies Below.
+            </h3>
+            <div class="col-md-4 text-blue-100">
+              <div class="s_card">
+                <p>
+                  <i class="text-blue-500">2022 - Present</i><br />
+                  <b>AWS Cloud Practitioner</b><br /><br />
+                  I'm a certified AWS Cloud Practitioner with experience using
+                  AWS services in my projects. I'm proficient in AWS services
+                  such as EC2, S3, RDS, Lambda and AWS Cloud Development Kit
+                  (CDK).
+                </p>
+                <span class="tag"> 1x AWS Certified </span>
               </div>
+            </div>
 
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>2021 - Present</span><br />
-                      <b class="color-100"> Back-end </b><br />
-                      I'm a skilled back-end web developer with experience in
-                      PHP, Node.js, and MySQL. I'm also familiar with the basics
-                      of back-end development, such as API development and
-                      database design.
-                    </p>
-
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="lab la-aws"></i>
-                          </span>
-                          1x AWS Certified
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="lab la-php"></i>
-                          </span>
-                          PHP
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="lab la-node-js"></i>
-                          </span>
-                          Node.js
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-2">
-                            <i class="las la-server"></i>
-                          </span>
-                          MySQL
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-md-4 text-blue-100">
+              <div class="s_card">
+                <p>
+                  <i class="text-blue-500">2020 - Present</i><br />
+                  <b>Back-end</b><br /><br />
+                  I'm a proficient back-end web developer with experience in
+                  PHP, Node.js, and MySQL. I'm also familiar with the basics of
+                  back-end development, such as API development and database
+                  design.
+                </p>
+                <span class="tag"> PHP, Node.js, MySQL </span>
               </div>
+            </div>
 
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-text">
-                      <span>2022 - Present</span><br />
-                      <b class="color-100"> Front-end </b><br />
-                      I'm a proficient front-end web developer with experience
-                      in HTML, CSS, JavaScript, and the latest web development
-                      frameworks, such as React and bootstrap. I've also
-                      developed responsive websites that work well on all
-                      devices.
-                    </p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-1">
-                            <i class="lab la-html5"></i>
-                          </span>
-                          HTML5
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-1">
-                            <i class="lab la-css3"></i>
-                          </span>
-                          CSS3
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-1">
-                            <i class="lab la-js-square"></i>
-                          </span>
-                          JavaScript
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-1">
-                            <i class="lab la-bootstrap"></i>
-                          </span>
-                          Bootstrap
-                        </span>
-
-                        <span class="btn tag rounded-pill mt-2">
-                          <span class="me-1">
-                            <i class="lab la-react"></i>
-                          </span>
-                          React
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-md-4 text-blue-100">
+              <div class="s_card">
+                <p>
+                  <i class="text-blue-500">2019 - Present</i><br />
+                  <b>Front-end</b><br /><br />
+                  I'm a proficient front-end web developer with experience in
+                  HTML, CSS, JavaScript, and the latest web development
+                  frameworks, such as React and bootstrap. I've also developed
+                  responsive websites that work well on all devices.
+                </p>
+                <span class="tag">
+                  HTML5, CSS3, JavaScript, React, Bootstrap
+                </span>
               </div>
             </div>
           </div>
@@ -274,82 +202,62 @@
 
       <section id="projects">
         <div class="container">
-          <div class="color-500 pt-50 ms-4">
-            <h1 class="color-100">Projects</h1>
-            <p class="text-capitalize">
-              Discover My Digital Footprint: Explore My Captivating Projects
-              Below.
-            </p>
-
-            <div class="row">
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-img mb-3">
-                      <img
-                        src="uploads/tic-tac-toe.jpg"
-                        alt=""
-                        class="img-fluid center"
-                      />
-                    </div>
-                    <h5 class="color-100">Tic tac toe</h5>
-                    <p class="card-text">
-                      The Tic Tac Toe project showcases my ability to develop
-                      interactive web applications using JavaScript. Built with
-                      HTML, CSS, and JavaScript, it features a user-friendly
-                      interface that provides clear notifications for turns, as
-                      well as indicating wins or draws.
-                    </p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <a
-                          href="https://tebogo60.github.io/tic_tac_toe/"
-                          class="btn p-3 pt-1 pb-1 rounded-pill btn-neon"
-                          target="_blank"
-                        >
-                          Visit Site
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+          <div class="row">
+            <h1 class="heading">
+              <span>PRO-</span>
+              <span>JECTS</span>
+            </h1>
+            <h3 class="sub-heading">
+              My Digital Footprint: Explore My Captivating Projects Below.
+            </h3>
+            <div class="col-md-4">
+              <div class="p_card">
+                <div class="p_card_img">
+                  <img src="img/tic-tac-toe.jpg" alt="" />
+                </div>
+                <div class="s_card">
+                  <p>
+                    <b>Tic Tac Toe</b><br /><br />
+                    The Tic Tac Toe project showcases my ability to develop
+                    interactive web applications using JavaScript. Built with
+                    HTML, CSS, and JavaScript, it features a user-friendly
+                    interface that provides clear notifications for turns, as
+                    well as indicating wins or draws.
+                  </p>
+                  <a
+                    href="https://tebogo60.github.io/tic_tac_toe/"
+                    class="button"
+                    target="_blank"
+                  >
+                    <span>visit <b>Site</b></span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
+            </div>
 
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="card-img mb-3">
-                      <img
-                        src="uploads/calculator.jpg"
-                        alt=""
-                        class="img-fluid center"
-                      />
-                    </div>
-                    <h5 class="color-100">Simple Math Calculator</h5>
-                    <p class="card-text">
-                      The Simple Math Calculator is a web project that showcases
-                      my front-end web development skills and expertise in
-                      JavaScript programming. It offers a user-friendly
-                      interface and enables users to easily perform common math
-                      operations like addition, subtraction, multiplication, and
-                      division.
-                    </p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="btn-group-sm">
-                        <a
-                          href="https://tebogo60.github.io/calculator/"
-                          class="btn p-3 pt-1 pb-1 rounded-pill btn-neon"
-                          target="_blank"
-                        >
-                          Visit Site
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+            <div class="col-md-4">
+              <div class="p_card">
+                <div class="p_card_img">
+                  <img src="img/calculator.jpg" alt="" />
+                </div>
+                <div class="s_card">
+                  <p>
+                    <b>Simple Math Calculator</b><br /><br />
+                    The Simple Math Calculator is a web project that showcases
+                    my front-end web development skills and expertise in
+                    JavaScript programming. It offers a user-friendly interface
+                    and enables users to easily perform common math operations
+                    like addition, subtraction, multiplication, and division.
+                  </p>
+                  <a
+                    href="https://tebogo60.github.io/calculator/"
+                    class="button"
+                    target="_blank"
+                  >
+                    <span>visit <b>Site</b></span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
                 </div>
               </div>
             </div>
@@ -359,64 +267,48 @@
 
       <section id="getintouch">
         <div class="container">
-          <div class="color-500 pt-50 ms-4">
-            <h1 class="color-100">Get In Touch</h1>
-            <p class="text-capitalize">
-              Lets collaborate and create digital magic reach out to ignite your
-              next project.
-            </p>
-
-            <div class="row">
-              <div class="col-md-8">
-                <div class="card mb-3">
-                  <div class="p-3">
-                    <h6 class="mb-0 color-500">Email Address:</h6>
-                    <p class="mb-0 color-500 opacity-75">
-                      tebogomalebana.tm@gmail.com
-                    </p>
-                  </div>
-                </div>
-
-                <div class="card mb-3">
-                  <div class="p-3">
-                    <h6 class="mb-0 color-500">WhatsApp:</h6>
-                    <p class="mb-0 color-500 opacity-75">+27 67 057 2758</p>
-                  </div>
-                </div>
-
+          <div class="row justify-content-end">
+            <h1 class="col-md-12 heading left-heading">
+              <span>GET IN</span>
+              <span>TOUCH</span>
+            </h1>
+            <div class="col-md-6 text-end text-blue-100">
+              <h3 class="sub-heading">
+                Let's Collaborate and Create Digital Magic: Reach Out to Ignite
+                Your Next Project.
+              </h3>
+              <b>Email Address:</b><br />
+              <small>tebogomalebana.tm@gmail.com</small>
+              <br /><br />
+              <b>WhatsApp:</b><br />
+              <small>+27 67 057 2758</small>
+              <br /><br />
+              <b>LinkedIn:</b><br />
+              <small class="text-blue-100">
                 <a
                   href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
-                  class="card mb-3 text-decoration-none"
+                  class="link"
                   target="_blank"
                 >
-                  <div class="p-3">
-                    <h6 class="mb-0 color-500">Linkedin:</h6>
-                    <p class="mb-0 color-500 opacity-75">
-                      https://www.linkedin.com/in/tebogo-malebana-47b640249/
-                    </p>
-                  </div>
+                  https://www.linkedin.com/in/tebogo-malebana-47b640249/
                 </a>
-              </div>
+              </small>
             </div>
           </div>
         </div>
       </section>
-
-      <footer class="py-5">
-        <div class="container justify-content-center text-center">
-          <p class="color-500 px-5">
-            <small>
-              <small>
-                Designed in <b>Figma</b>, coded in <b>Visual Studio Code</b>,
-                and built with <b>Bootstrap</b>. Deployed with <b>GitHub</b> and
-                set in <b>Inter</b> font.
-              </small>
-            </small>
-          </p>
-        </div>
-      </footer>
     </main>
 
-    <script src="js/script.js"></script>
+    <footer class="p-5 text-blue-500 blur">
+      <small>
+        Designed in <b>Figma</b>, coded in <b>Visual Studio Code</b>, and built
+        with <b>Bootstrap</b>. Deployed with <b>GitHub</b> and set in
+        <b>Montserrat</b> font.
+      </small>
+    </footer>
   </body>
+
+  <script src="js/all.js"></script>
+  <script src="js/static.js"></script>
+  <script src="js/main.js"></script>
 </html>
