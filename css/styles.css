@@ -53,6 +53,10 @@ section .container {
     align-items: center;
 }
 
+section .row {
+    gap: 15px;
+}
+
 .circles {
     position: relative;
     height: inherit;
@@ -182,7 +186,6 @@ section .container {
     color: var(--blue-500);
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 35px;
 }
 
 .social_media {
@@ -214,6 +217,7 @@ section .container {
     position: relative;
     display: flex;
     padding: 15px;
+    margin-bottom: 25px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -309,7 +313,6 @@ section .container {
 @media (min-width: 997px) {
     .p_card:hover .p_card_img {
         transition-delay: 0.5s;
-        height: 135px;
     }
 
     .p_card:hover .p_card_img img {
