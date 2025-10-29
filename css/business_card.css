@@ -200,10 +200,10 @@ body {
 /* ---------- QR Code ---------- */
 .qr-code {
     position: absolute;
-    bottom: 16px;
+    bottom: 32px;
     left: 50%;
     transform: translateX(-50%);
-    width: 30%;
+    width: 50%;
     max-width: 240px;
     aspect-ratio: 1 / 1;
 }
