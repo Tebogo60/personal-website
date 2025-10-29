@@ -133,7 +133,7 @@ body {
 .card-content {
     position: absolute;
     width: calc(100% - 32px);
-    top: calc(160px + 32px);
+    top: calc(160px + 16px);
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%);
@@ -206,7 +206,7 @@ body {
 /* ---------- QR Code ---------- */
 .qr-code {
     position: relative;
-    top: 32px;
+    top: 16px;
     left: 50%;
     transform: translateX(-50%);
     width: 50%;
