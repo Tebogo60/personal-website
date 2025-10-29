@@ -32,7 +32,7 @@ body {
 }
 
 .ball {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
     animation: float var(--float-duration) ease-in-out infinite;
     width: var(--ball-width);
