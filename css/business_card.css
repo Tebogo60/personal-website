@@ -1,4 +1,11 @@
-/* ---------- Base Styles ---------- */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     display: flex;
@@ -8,9 +15,8 @@ body {
     background: var(--blue-900);
     color: var(--blue-100);
     font-size: 16px;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    width: 100%;
+    min-height: 100%;
 }
 
 /* ---------- Ball Animation ---------- */
