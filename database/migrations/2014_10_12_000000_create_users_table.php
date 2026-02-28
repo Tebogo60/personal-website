@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone_number')->nullable();
-            $table->string('linkedin')->nullable();
-            $table->string('github')->nullable();
+            $table->string('linkedin')->nullable()->unique();
+            $table->string('github')->nullable()->unique();
             $table->enum('role', ['ADMIN', 'GENERAL'])->default('GENERAL');
             $table->boolean('is_verified')->default(false);
             $table->timestamp('email_verified_at')->nullable();
