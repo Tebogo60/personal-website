@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('experience_languages', function (Blueprint $table) {
             $table->id();
-            $table->foreign('experience_id')
+            $table->foreignId('experience_id')
                 ->constrained('experiences')
                 ->onDelete('cascade');
             $table->string('language_name');
