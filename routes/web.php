@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PageSummaryController;
 use App\Http\Controllers\SocialMediaLinkController;
 use App\Http\Controllers\UserController;
+use App\Models\PageSummary;
 use App\Models\SocialMediaLink;
 use Illuminate\Support\Facades\Route;
 
@@ -18,11 +20,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $socialMediaLinks = SocialMediaLink::all();
+    $pageSummaries = PageSummary::all();
 
     return view(
         'home',
         [
-            'socialMediaLinks' => $socialMediaLinks
+            'socialMediaLinks' => $socialMediaLinks,
+            'pageSummaries' => $pageSummaries
         ]
     );
 });
@@ -41,3 +45,7 @@ Route::post('/logout', [UserController::class, 'logoutUser']);
 Route::post('/add-social-media-link', [SocialMediaLinkController::class, 'addSocialMediaLink']);
 Route::put('/update-social-media-link/{socialMediaLink}', [SocialMediaLinkController::class, 'updateSocialMediaLink']);
 Route::delete('/delete-social-media-link/{socialMediaLink}', [SocialMediaLinkController::class, 'deleteSocialMediaLink']);
+
+Route::post('/add-page-summary', [PageSummaryController::class, 'addPageSummary']);
+Route::put('/update-page-summary/{pageSummary}', [PageSummaryController::class, 'updatePageSummary']);
+Route::delete('/delete-page-summary/{pageSummary}', [PageSummaryController::class, 'deletePageSummary']);
