@@ -1,0 +1,9 @@
+@media (width >= 768px) {
+  .left-heading {
+    text-align: right;
+  }
+
+  .heading {
+    font-size: 64px;
+  }
+}

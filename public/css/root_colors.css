@@ -1,0 +1,68 @@
+:root {
+  --blue-900: #0d1829;
+  --blue-500: #55677b;
+  --blue-300: #4debd5;
+  --blue-100: #d9d9d9;
+
+  --accent: var(--blue-300);
+
+  --gradient-blue-300: linear-gradient(180deg, #55677b, #0d1829);
+  --gradient-blue-100: linear-gradient(180deg, #4debd5, #0d1829);
+  --gradient-pink-100: linear-gradient(180deg, #de4deb, #0d1829);
+  --gradient-red-100: linear-gradient(180deg, #eb4d4d, #0d1829);
+}
+
+.light_theme {
+  --blue-900: #d9d9d9;
+  --blue-500: #55677b;
+  --blue-300: #4debd5;
+  --blue-100: #0d1829;
+}
+
+.bg-blue-900 {
+  background: var(--blue-900);
+}
+
+.bg-blue-500 {
+  background: var(--blue-500);
+}
+
+.bg-blue-300 {
+  background: var(--blue-300);
+}
+
+.bg-blue-100 {
+  background: var(--blue-100);
+}
+
+.text-blue-900 {
+  color: var(--blue-900);
+}
+
+.text-blue-500 {
+  color: var(--blue-500);
+}
+
+.text-blue-300 {
+  color: var(--blue-300);
+}
+
+.text-blue-100 {
+  color: var(--blue-100);
+}
+
+.bg-gradient-blue-100 {
+  background: var(--gradient-blue-100);
+}
+
+.bg-gradient-blue-300 {
+  background: var(--gradient-blue-300);
+}
+
+.bg-gradient-pink-100 {
+  background: var(--gradient-pink-100);
+}
+
+.bg-gradient-red-100 {
+  background: var(--gradient-red-100);
+}

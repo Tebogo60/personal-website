@@ -1,536 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tebogo Malebana | Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebogo Malebana</title>
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="{{ asset('css/root_colors.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
+    />
 </head>
 <body>
-<p style="color: green;">
-    {{ session('message') }}
-</p>
+<a href="#" class="return opacity-0">
+    <i class="fas fa-arrow-down" style="rotate: 180deg"></i>
+    <span>back <b>Top</b></span>
+</a>
 
-@auth
-    <!-- Social Media Links -->
-    <h2>All Social Media Links</h2>
-    @if($socialMediaLinks->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Link Name</th>
-                <th>Link URL</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($socialMediaLinks as $link)
-                <tr>
-                    <td>{{ $link->id }}</td>
-                    <form action="/update-social-media-link/{{ $link->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="link_name" value="{{ $link->link_name }}" required></td>
-                        <td><input type="text" name="link_url" value="{{ $link->link_url }}" required></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-social-media-link/{{ $link->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $link->created_at }}</td>
-                    <td>{{ $link->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+<div class="bg_box">
+    <div class="boxes"></div>
+</div>
 
-        <form action="/add-social-media-link" method="post">
-            @csrf
-            <input type="text" name="link_name" placeholder="Link Name" required>
-            <input type="text" name="link_url" placeholder="Link URL" required>
-            <button type="submit">Add Link</button>
-        </form>
-    @else
-        <p>No social media links available.</p>
-    @endif
+<div class="indicator_track">
+    <div class="indicator"></div>
+</div>
 
-    <!-- Page Summary -->
-    <h2>Page Summaries</h2>
-    @if($pageSummaries && $pageSummaries->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Muted Text</th>
-                <th>Title</th>
-                <th>Sub Title</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($pageSummaries as $summary)
-                <tr>
-                    <td>{{ $summary->id }}</td>
-                    <form action="/update-page-summary/{{ $summary->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="muted_text" value="{{ $summary->muted_text }}"></td>
-                        <td><input type="text" name="title" value="{{ $summary->title }}" required></td>
-                        <td><input type="text" name="sub_title" value="{{ $summary->sub_title }}"></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-page-summary/{{ $summary->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $summary->created_at }}</td>
-                    <td>{{ $summary->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
-    @else
-        <p>No page summaries available.</p>
-    @endif
+<nav class="navbar navbar-expand-sm fixed-top blur">
+    <div class="container">
+        <div class="navbar-brand text-blue-100">
+            <span class="brand_logo"></span>
+            <a href="#"> <b>Tebogo</b> Malebana </a>
+        </div>
+    </div>
+</nav>
 
-    <form action="/add-page-summary" method="POST">
-        @csrf
-        <input type="text" name="muted_text" placeholder="Muted Text">
-        <input type="text" name="title" placeholder="Title" required>
-        <input type="text" name="sub_title" placeholder="Sub Title">
-        <button type="submit">Add Page Summary</button>
-    </form>
+<main>
 
-    <!-- Page Summary Links -->
-    <h2>Page Summary Links</h2>
-    @if($pageSummaryLinks->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Page Summary ID</th>
-                <th>Link Name</th>
-                <th>Link Type</th>
-                <th>Link URL</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($pageSummaryLinks as $link)
-                <tr>
-                    <td>{{ $link->id }}</td>
-                    <td>{{ $link->page_summary_id }}</td>
-                    <form action="/update-page-summary-link/{{ $link->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="link_name" value="{{ $link->link_name }}" required></td>
-                        <td><input type="text" name="link_type" value="{{ $link->link_type }}" required></td>
-                        <td><input type="text" name="link_url" value="{{ $link->link_url }}" required></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-page-summary-link/{{ $link->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $link->created_at }}</td>
-                    <td>{{ $link->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+    <!-- ── JUMBOTRON ── -->
+    <section id="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="jumbo-grid">
 
-        <h3>Add Page Summary Link</h3>
-        <form action="/add-page-summary-link" method="POST">
-            @csrf
-            <select name="page_summary_id" required>
-                <option value="">Select Page Summary</option>
-                @foreach($pageSummaries as $summary)
-                    <option value="{{ $summary->id }}">{{ $summary->title }}</option>
-                @endforeach
-            </select>
-            <input type="text" name="link_name" placeholder="Link Name" required>
-            <input type="text" name="link_type" placeholder="Link Type" required>
-            <input type="text" name="link_url" placeholder="Link URL" required>
-            <button type="submit">Add Page Summary Link</button>
-        </form>
-    @else
-        <p>No page summary links available.</p>
+                    @foreach($pageSummaries as $summary)
+                        @if($summary->muted_text)
+                            <div class="small text-blue-100">
+                                <span></span>
+                                {{ $summary->muted_text }}
+                            </div>
+                        @endif
 
-        <h3>Add Page Summary Link</h3>
-        <form action="/add-page-summary-link" method="POST">
-            @csrf
-            <select name="page_summary_id" required>
-                <option value="">Select Page Summary</option>
-                @foreach($pageSummaries as $summary)
-                    <option value="{{ $summary->id }}">{{ $summary->title }}</option>
-                @endforeach
-            </select>
-            <input type="text" name="link_name" placeholder="Link Name" required>
-            <input type="text" name="link_type" placeholder="Link Type" required>
-            <input type="text" name="link_url" placeholder="Link URL" required>
-            <button type="submit">Add Page Summary Link</button>
-        </form>
-    @endif
+                        <h1 class="heading">
+                            @php $words = explode(' ', strtoupper($summary->title)); @endphp
+                            @foreach($words as $word)
+                                <span>{{ $word }}</span>
+                            @endforeach
+                        </h1>
 
-    <!-- About Users -->
-    <h2>About Users</h2>
-    @if($aboutUsers->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Summary</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($aboutUsers as $aboutUser)
-                <tr>
-                    <td>{{ $aboutUser->id }}</td>
-                    <form action="/update-about-user/{{ $aboutUser->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="summary" value="{{ $aboutUser->summary }}" required></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-about-user/{{ $aboutUser->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $aboutUser->created_at }}</td>
-                    <td>{{ $aboutUser->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+                        @if($summary->sub_title)
+                            <h3 class="sub-heading">
+                                {{ $summary->sub_title }}
+                            </h3>
+                        @endif
+                    @endforeach
 
-        <form action="/add-about-user" method="POST">
-            @csrf
-            <input type="text" name="summary" placeholder="Summary" required>
-            <button type="submit">Add About User</button>
-        </form>
-    @else
-        <p>No about user records available.</p>
+                    <div class="jumbo_btns">
+                        @foreach($pageSummaryLinks as $link)
+                            <a href="{{ $link->link_url }}" class="button text-blue-100">
+                                <span>{{ $link->link_name }}</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        @endforeach
+                    </div>
 
-        <form action="/add-about-user" method="POST">
-            @csrf
-            <input type="text" name="summary" placeholder="Summary" required>
-            <button type="submit">Add About User</button>
-        </form>
-    @endif
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- About Links -->
-    <h2>About Links</h2>
-    @if($aboutLinks->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>About User ID</th>
-                <th>Link Name</th>
-                <th>Link Icon</th>
-                <th>Link Type</th>
-                <th>Link URL</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($aboutLinks as $link)
-                <tr>
-                    <td>{{ $link->id }}</td>
-                    <td>{{ $link->about_user_id }}</td>
-                    <form action="/update-about-link/{{ $link->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="link_name" value="{{ $link->link_name }}" required></td>
-                        <td><input type="text" name="link_icon" value="{{ $link->link_icon }}"></td>
-                        <td><input type="text" name="link_type" value="{{ $link->link_type }}" required></td>
-                        <td><input type="text" name="link_url" value="{{ $link->link_url }}" required></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-about-link/{{ $link->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $link->created_at }}</td>
-                    <td>{{ $link->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+    <!-- ── ABOUT ── -->
+    <section id="about">
+        <div class="container">
+            <div class="row justify-content-end">
+                <h1 class="heading left-heading">
+                    <span>ABOUT</span>
+                    <span>ME</span>
+                </h1>
 
-        <form action="/add-about-link" method="POST">
-            @csrf
-            <select name="about_user_id" required>
-                <option value="">Select About User</option>
-                @foreach($aboutUsers as $aboutUser)
-                    <option value="{{ $aboutUser->id }}">{{ $aboutUser->id }}</option>
-                @endforeach
-            </select>
-            <input type="text" name="link_name" placeholder="Link Name" required>
-            <input type="text" name="link_icon" placeholder="Link Icon">
-            <input type="text" name="link_type" placeholder="Link Type" required>
-            <input type="text" name="link_url" placeholder="Link URL" required>
-            <button type="submit">Add About Link</button>
-        </form>
-    @else
-        <p>No about links available.</p>
+                <div class="col-md-6 about-text text-blue-100">
 
-        <form action="/add-about-link" method="POST">
-            @csrf
-            <select name="about_user_id" required>
-                <option value="">Select About User</option>
-                @foreach($aboutUsers as $aboutUser)
-                    <option value="{{ $aboutUser->id }}">{{ $aboutUser->id }}</option>
-                @endforeach
-            </select>
-            <input type="text" name="link_name" placeholder="Link Name" required>
-            <input type="text" name="link_icon" placeholder="Link Icon">
-            <input type="text" name="link_type" placeholder="Link Type" required>
-            <input type="text" name="link_url" placeholder="Link URL" required>
-            <button type="submit">Add About Link</button>
-        </form>
-    @endif
+                    <!-- Social Media Links -->
+                    <div class="social_media">
+                        @foreach($socialMediaLinks as $link)
+                            <a target="_blank" href="{{ $link->link_url }}">
+                                <i class="{{ $link->link_name }}"></i>
+                            </a>
+                        @endforeach
+                    </div>
+                    <br />
 
-    <!-- Experiences -->
-    <h2>Experiences</h2>
-    @if($experiences->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Summary</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($experiences as $experience)
-                <tr>
-                    <td>{{ $experience->id }}</td>
-                    <form action="/update-experience/{{ $experience->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="title" value="{{ $experience->title }}" required></td>
-                        <td><input type="date" name="start_date" value="{{ $experience->start_date }}" required></td>
-                        <td><input type="date" name="end_date" value="{{ $experience->end_date }}"></td>
-                        <td><input type="text" name="summary" value="{{ $experience->summary }}" required></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-experience/{{ $experience->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $experience->created_at }}</td>
-                    <td>{{ $experience->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+                    <!-- About Paragraphs -->
+                    @foreach($aboutUsers as $aboutUser)
+                        <p>{{ $aboutUser->summary }}</p>
+                    @endforeach
 
-        <form action="/add-experience" method="POST">
-            @csrf
-            <input type="text" name="title" placeholder="Title" required>
-            <input type="date" name="start_date" required>
-            <input type="date" name="end_date">
-            <input type="text" name="summary" placeholder="Summary" required>
-            <button type="submit">Add Experience</button>
-        </form>
-    @else
-        <p>No experiences available.</p>
+                    <!-- About Links (Experience / Projects buttons) -->
+                    @foreach($aboutLinks as $link)
+                        <a href="{{ $link->link_url }}" class="button text-blue-100">
+                            <span>{{ $link->link_name }}</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    @endforeach
 
-        <form action="/add-experience" method="POST">
-            @csrf
-            <input type="text" name="title" placeholder="Title" required>
-            <input type="date" name="start_date" required>
-            <input type="date" name="end_date">
-            <input type="text" name="summary" placeholder="Summary" required>
-            <button type="submit">Add Experience</button>
-        </form>
-    @endif
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Experience Languages -->
-    <h2>Experience Languages</h2>
-    @if($experienceLanguages->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Experience ID</th>
-                <th>Language Name</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($experienceLanguages as $language)
-                <tr>
-                    <td>{{ $language->id }}</td>
-                    <td>{{ $language->experience_id }}</td>
-                    <form action="/update-experience-language/{{ $language->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="language_name" value="{{ $language->language_name }}" required></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-experience-language/{{ $language->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $language->created_at }}</td>
-                    <td>{{ $language->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+    <!-- ── EXPERIENCE ── -->
+    <section id="experience">
+        <div class="container">
+            <div class="row">
+                <h1 class="heading">
+                    <span>EXPE-</span>
+                    <span>RIENCE</span>
+                </h1>
+                <h3 class="sub-heading">
+                    Unlocking Digital Potential: Explore My Proficiencies Below.
+                </h3>
 
-        <form action="/add-experience-language" method="POST">
-            @csrf
-            <select name="experience_id" required>
-                <option value="">Select Experience</option>
                 @foreach($experiences as $experience)
-                    <option value="{{ $experience->id }}">{{ $experience->title }}</option>
+                    <div class="col-md-4 text-blue-100">
+                        <div class="s_card">
+                            <p>
+                                <i class="text-blue-500">
+                                    {{ \Carbon\Carbon::parse($experience->start_date)->format('Y') }}
+                                    -
+                                    {{ $experience->end_date ? \Carbon\Carbon::parse($experience->end_date)->format('Y') : 'Present' }}
+                                </i>
+                                <br />
+                                <b>{{ $experience->title }}</b>
+                                <br /><br />
+                                {{ $experience->summary }}
+                            </p>
+                            <span class="tag">
+                                        @foreach($experienceLanguages->where('experience_id', $experience->id) as $lang)
+                                    {{ $lang->language_name }}{{ !$loop->last ? ',' : '' }}
+                                @endforeach
+                                    </span>
+                        </div>
+                    </div>
                 @endforeach
-            </select>
-            <input type="text" name="language_name" placeholder="Language Name" required>
-            <button type="submit">Add Experience Language</button>
-        </form>
-    @else
-        <p>No experience languages available.</p>
 
-        <form action="/add-experience-language" method="POST">
-            @csrf
-            <select name="experience_id" required>
-                <option value="">Select Experience</option>
-                @foreach($experiences as $experience)
-                    <option value="{{ $experience->id }}">{{ $experience->title }}</option>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="heading">
+                    <span>PRO-</span>
+                    <span>JECTS</span>
+                </h1>
+                <h3 class="sub-heading">
+                    My Digital Footprint: Explore My Captivating Projects Below.
+                </h3>
+
+                @foreach($projects as $project)
+                    <div class="col-md-4">
+                        <div class="p_card">
+                            @if($project->cover_img)
+                                <div class="p_card_img">
+                                    <img src="{{ $project->cover_img }}" alt="{{ $project->name }}" />
+                                </div>
+                            @endif
+                            <div class="s_card">
+                                <p>
+                                    <b>{{ $project->name }}</b><br /><br />
+                                    {{ $project->summary }}
+                                </p>
+                                @if($project->project_url)
+                                    <a href="{{ $project->project_url }}" class="button" target="_blank">
+                                        <span>visit <b>Site</b></span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
-            </select>
-            <input type="text" name="language_name" placeholder="Language Name" required>
-            <button type="submit">Add Experience Language</button>
-        </form>
-    @endif
 
-    <!-- Projects -->
-    <h2>Projects</h2>
-    @if($projects->count() > 0)
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Cover Image</th>
-                <th>Summary</th>
-                <th>Project URL</th>
-                <th>Update</th>
-                <th>Delete</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($projects as $project)
-                <tr>
-                    <td>{{ $project->id }}</td>
-                    <form action="/update-project/{{ $project->id }}" method="POST">
-                        @csrf
-                        @method('PUT')
-                        <td><input type="text" name="name" value="{{ $project->name }}" required></td>
-                        <td><input type="text" name="cover_img" value="{{ $project->cover_img }}"></td>
-                        <td><input type="text" name="summary" value="{{ $project->summary }}" required></td>
-                        <td><input type="text" name="project_url" value="{{ $project->project_url }}"></td>
-                        <td><button type="submit">Update</button></td>
-                    </form>
-                    <td>
-                        <form action="/delete-project/{{ $project->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button>Delete</button>
-                        </form>
-                    </td>
-                    <td>{{ $project->created_at }}</td>
-                    <td>{{ $project->updated_at }}</td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
+            </div>
+        </div>
+    </section>
 
-        <form action="/add-project" method="POST">
-            @csrf
-            <input type="text" name="name" placeholder="Project Name" required>
-            <input type="text" name="cover_img" placeholder="Cover Image">
-            <input type="text" name="summary" placeholder="Summary" required>
-            <input type="text" name="project_url" placeholder="Project URL">
-            <button type="submit">Add Project</button>
-        </form>
-    @else
-        <p>No projects available.</p>
+    <!-- ── GET IN TOUCH ── -->
+    <section id="getintouch">
+        <div class="container">
+            <div class="row justify-content-end">
+                <h1 class="heading left-heading">
+                    <span>GET IN</span>
+                    <span>TOUCH</span>
+                </h1>
 
-        <form action="/add-project" method="POST">
-            @csrf
-            <input type="text" name="name" placeholder="Project Name" required>
-            <input type="text" name="cover_img" placeholder="Cover Image">
-            <input type="text" name="summary" placeholder="Summary" required>
-            <input type="text" name="project_url" placeholder="Project URL">
-            <button type="submit">Add Project</button>
-        </form>
-    @endif
+                <div class="col-md-6 text-blue-100 text-end">
+                    <p class="sub-heading">
+                        Thank you for visiting my portfolio! If you'd
+                        like to connect or discuss opportunities, feel
+                        free to reach out via email—it's my preferred
+                        method of communication.
+                    </p>
 
-    <!-- Logout -->
-    <p>Congrats {{ ucfirst(auth()->user()->name) }} you're logged in.
-    <form action="/logout" method="POST">
-        @csrf
-        <button>Logout</button>
-    </form>
-    </p>
+                    <b>Email Address:</b><br />
+                    <small>tjjmalebana@gmail.com</small>
+                    <br /><br />
+                    <b>WhatsApp:</b><br />
+                    <small>+27 67 057 2758</small>
+                    <br /><br />
+                    <b>LinkedIn:</b><br />
+                    <small class="text-blue-100">
+                        <a
+                            href="https://www.linkedin.com/in/tebogo-malebana-47b640249/"
+                            class="link"
+                            target="_blank"
+                        >
+                            https://www.linkedin.com/in/tebogo-malebana-47b640249/
+                        </a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </section>
 
-@else
-    <p>Please <a href="/login">login</a> or <a href="/register">register</a>.</p>
-@endauth
+</main>
+
+<footer class="p-5 text-blue-500 blur">
+    <small>
+        Designed in <b>Figma</b>, coded in <b>Visual Studio Code</b>,
+        and built with <b>Bootstrap</b>. Deployed with <b>GitHub</b> and
+        set in <b>Montserrat</b> font.
+    </small>
+</footer>
+
+<script src="{{ asset('js/all.js') }}"></script>
+<script src="{{ asset('js/static.js') }}"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>

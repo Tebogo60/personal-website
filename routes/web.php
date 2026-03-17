@@ -30,6 +30,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/dashboard', function () {
+    $socialMediaLinks = SocialMediaLink::all();
+    $pageSummaries = PageSummary::all();
+    $pageSummaryLinks = PageSummaryLink::all();
+    $aboutUsers = AboutUser::all();
+    $aboutLinks = AboutLink::all();
+    $experiences = Experience::all();
+    $experienceLanguages = ExperienceLanguage::all();
+    $projects = Project::all();
+
+    return view('dashboard', [
+        'socialMediaLinks' => $socialMediaLinks,
+        'pageSummaries' => $pageSummaries,
+        'pageSummaryLinks' => $pageSummaryLinks,
+        'aboutUsers' => $aboutUsers,
+        'aboutLinks' => $aboutLinks,
+        'experiences' => $experiences,
+        'experienceLanguages' => $experienceLanguages,
+        'projects' => $projects,
+    ]);
+});
+
 Route::get('/', function () {
     $socialMediaLinks = SocialMediaLink::all();
     $pageSummaries = PageSummary::all();
